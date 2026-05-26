@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiquita Academy — Land / Foncier</title>
+  <title>Oasis Padel Academy — Land / Foncier</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
-      var l = localStorage.getItem('chiquita-lang') || 'fr';
+      var l = localStorage.getItem('oasis-lang') || 'fr';
       document.documentElement.lang = l;
       document.documentElement.className = 'lang-' + l;
     })();
@@ -23,7 +23,7 @@
     .nav-logo-icon svg {
       width: 18px;
       height: 18px;
-      stroke: #060826;
+      stroke: currentColor;
       stroke-width: 2.5;
       display: block;
     }
@@ -46,10 +46,12 @@
 
     /* ── Shared ── */
     .section-h2 {
-      font-size: clamp(17px, 2.8vw, 22px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--text-strong);
       margin: -0.25rem 0 1.25rem;
     }
 
@@ -89,10 +91,11 @@
     }
 
     .req-label {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: var(--muted);
       margin-bottom: 3px;
     }
@@ -128,11 +131,11 @@
     }
 
     .option-card.blue-hl {
-      border-color: rgba(90, 180, 255, 0.25);
+      border-color: rgba(111, 176, 232, 0.3);
     }
 
     .option-card.green-hl {
-      border-color: rgba(77, 255, 145, 0.2);
+      border-color: rgba(127, 214, 143, 0.25);
     }
 
     .option-head {
@@ -146,45 +149,46 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 1.3;
+      color: var(--text-strong);
     }
 
     .opt-tag {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       padding: 3px 9px;
       border-radius: 5px;
       flex-shrink: 0;
     }
 
     .opt-tag.blue {
-      background: rgba(90, 180, 255, 0.12);
+      background: rgba(111, 176, 232, 0.12);
       color: var(--blue);
     }
 
     .opt-tag.green {
-      background: rgba(77, 255, 145, 0.1);
+      background: rgba(127, 214, 143, 0.12);
       color: var(--green);
     }
 
     .opt-tag.accent {
-      background: rgba(242, 125, 22, 0.12);
+      background: rgba(242, 201, 76, 0.12);
       color: var(--accent);
     }
 
     .opt-tag.muted {
-      background: rgba(136, 136, 136, 0.1);
+      background: rgba(160, 144, 128, 0.1);
       color: var(--muted);
     }
 
     .opt-tag.orange {
-      background: rgba(255, 107, 53, 0.12);
-      color: var(--accent2);
+      background: rgba(242, 201, 76, 0.12);
+      color: var(--accent);
     }
 
     .opt-tag.red {
-      background: rgba(255, 68, 68, 0.1);
+      background: rgba(226, 100, 100, 0.12);
       color: var(--red);
     }
 
@@ -203,6 +207,7 @@
       align-items: flex-start;
       gap: 7px;
       line-height: 1.5;
+      color: var(--text);
     }
 
     .pro-con-list li .marker {
@@ -220,18 +225,19 @@
     }
 
     .option-section-label {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       color: var(--muted);
       margin-bottom: 6px;
     }
 
     .option-contacts {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       color: var(--muted);
-      font-family: 'DM Mono', monospace;
       line-height: 1.8;
     }
 
@@ -259,7 +265,8 @@
     }
 
     .pricing-row .p-val {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-weight: 600;
       color: var(--accent);
       white-space: nowrap;
@@ -289,7 +296,7 @@
 
     .cost-bar-track {
       flex: 1;
-      background: rgba(6, 8, 38, 0.04);
+      background: rgba(255, 255, 255, 0.04);
       border-radius: 4px;
       height: 24px;
       overflow: hidden;
@@ -301,12 +308,13 @@
       display: flex;
       align-items: center;
       padding-left: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-size: 11px;
-      font-family: 'DM Mono', monospace;
       font-weight: 600;
-      color: #060826;
+      color: var(--bg);
       white-space: nowrap;
-      transition: width 0.4s ease;
+      transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     /* ── Zone cards ── */
@@ -331,15 +339,15 @@
     }
 
     .zone-card.z-accent {
-      border-color: rgba(242, 125, 22, 0.25);
+      border-color: rgba(242, 201, 76, 0.3);
     }
 
     .zone-card.z-blue {
-      border-color: rgba(90, 180, 255, 0.2);
+      border-color: rgba(111, 176, 232, 0.25);
     }
 
     .zone-card.z-muted {
-      border-color: rgba(255, 68, 68, 0.15);
+      border-color: rgba(226, 100, 100, 0.2);
     }
 
     .zone-map {
@@ -350,20 +358,19 @@
       align-items: center;
       justify-content: center;
       font-size: 22px;
-      font-family: 'DM Mono', monospace;
       letter-spacing: 0.05em;
     }
 
     .zone-map.acc-bg {
-      background: rgba(242, 125, 22, 0.08);
+      background: rgba(242, 201, 76, 0.08);
     }
 
     .zone-map.blue-bg {
-      background: rgba(90, 180, 255, 0.08);
+      background: rgba(111, 176, 232, 0.08);
     }
 
     .zone-map.muted-bg {
-      background: rgba(136, 136, 136, 0.06);
+      background: rgba(160, 144, 128, 0.06);
     }
 
     .zone-name {
@@ -375,6 +382,7 @@
       justify-content: space-between;
       gap: 6px;
       flex-wrap: wrap;
+      color: var(--text-strong);
     }
 
     .zone-desc {
@@ -405,7 +413,7 @@
     }
 
     .constr-card.acc-hl {
-      border-color: rgba(242, 125, 22, 0.25);
+      border-color: rgba(242, 201, 76, 0.3);
     }
 
     .constr-title {
@@ -416,6 +424,7 @@
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
+      color: var(--text-strong);
     }
 
     .constr-desc {
@@ -458,7 +467,7 @@
     }
 
     .status-badge {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       font-weight: 700;
       padding: 3px 9px;
@@ -468,54 +477,54 @@
     }
 
     .status-badge.done {
-      background: rgba(77, 255, 145, 0.1);
+      background: rgba(127, 214, 143, 0.1);
       color: var(--green);
     }
 
     .status-badge.inprog {
-      background: rgba(251, 191, 36, 0.1);
-      color: var(--yellow);
+      background: rgba(242, 201, 76, 0.1);
+      color: var(--accent);
     }
 
     .status-badge.pending {
-      background: rgba(251, 191, 36, 0.08);
-      color: var(--yellow);
+      background: rgba(242, 201, 76, 0.08);
+      color: var(--accent);
     }
 
     .status-badge.waiting {
-      background: rgba(136, 136, 136, 0.08);
+      background: rgba(160, 144, 128, 0.08);
       color: var(--muted);
     }
 
     /* ── MENU button — mobile only ── */
-        .hamburger {
-            display: none;
-            align-items: center;
-            gap: 6px;
-            padding: 0 13px;
-            height: 34px;
-            background: transparent;
-            border: 1px solid var(--border2);
-            border-radius: 8px;
-            cursor: pointer;
-            color: var(--text);
-            font-family: 'Syne', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            flex-shrink: 0;
-            transition: opacity 0.15s;
-        }
+    .hamburger {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 0 13px;
+      height: 34px;
+      background: transparent;
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      transition: opacity 0.15s;
+    }
 
-            .hamburger:hover {
-            opacity: 0.85;
-        }
+    .hamburger:hover {
+      opacity: 0.85;
+    }
 
-            .hamburger .menu-bars {
-            font-size: 16px;
-            line-height: 1;
-        }
+    .hamburger .menu-bars {
+      font-size: 16px;
+      line-height: 1;
+    }
 
     .mobile-nav {
       display: none;
@@ -523,7 +532,7 @@
       top: 56px;
       left: 0;
       right: 0;
-      background: rgba(245, 236, 215, 0.98);
+      background: rgba(28, 28, 28, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       z-index: 99;
@@ -551,12 +560,12 @@
 
     .mobile-nav a:hover {
       color: var(--text);
-      background: rgba(6, 8, 38, 0.04);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .mobile-nav a.active {
       color: var(--accent);
-      background: rgba(242, 125, 22, 0.06);
+      background: rgba(242, 201, 76, 0.08);
     }
 
     @media (max-width: 700px) {
@@ -579,7 +588,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-        <span class="nav-logo-text">Chiquita</span>
+        <span class="nav-logo-text">OASIS</span>
       </a>
       <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
       <div class="nav-links">
@@ -612,7 +621,7 @@
   <!-- ── PAGE HEADER ─────────────────────────────────────────── -->
   <div class="page-header">
     <div class="page-header-inner">
-      <div class="page-subtitle">Chiquita Academy · Da Nang</div>
+      <div class="page-subtitle">Oasis Padel Academy · Da Nang</div>
       <h1>
         <span class="fr"><span>Foncier</span> &amp; Localisation</span>
         <span class="en">Land &amp; <span>Location</span></span>
@@ -627,7 +636,7 @@
 
     <!-- ══ SECTION 1 — OVERVIEW ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.12);color:var(--accent);">
         <i data-lucide="search"></i>
       </div>
       <div>
@@ -696,7 +705,7 @@
 
     <!-- ══ SECTION 2 — TWO OPTIONS ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(90,180,255,0.12);color:var(--blue);">
+      <div class="section-icon" style="background:rgba(111,176,232,0.12);color:var(--blue);">
         <i data-lucide="git-compare"></i>
       </div>
       <div>
@@ -715,7 +724,7 @@
           <div>
             <div class="option-title fr">Location privée</div>
             <div class="option-title en">Private Lease</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:3px;font-family:'DM Mono',monospace;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--muted);margin-top:3px;">
               <span class="fr">via agents immobiliers</span>
               <span class="en">via real estate agents</span>
             </div>
@@ -774,11 +783,11 @@
       </div>
 
       <!-- Option B: IPA — ABANDONED -->
-      <div class="option-card" style="border-color:rgba(255,68,68,0.2);opacity:0.55;pointer-events:none;">
+      <div class="option-card" style="border-color:rgba(226,100,100,0.25);opacity:0.55;pointer-events:none;">
         <div
-          style="background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.3);border-radius:8px;padding:7px 12px;display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;">
+          style="background:rgba(226,100,100,0.1);border:1px solid rgba(226,100,100,0.3);border-radius:8px;padding:7px 12px;display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;">
           <i data-lucide="x-circle"></i>
-          <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--red);">
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--red);">
             <span class="fr">Voie abandonnée — trop longue, trop lourde, trop risquée</span>
             <span class="en">Path dropped — too long, too heavy, too risky</span>
           </span>
@@ -789,7 +798,7 @@
             </div>
             <div class="option-title en" style="text-decoration:line-through;color:var(--muted);">FDI Lease via IPA
             </div>
-            <div style="font-size:12px;color:var(--muted);margin-top:3px;font-family:'DM Mono',monospace;">IPA Da Nang
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--muted);margin-top:3px;">IPA Da Nang
             </div>
           </div>
           <span class="opt-tag red fr">ABANDONNÉ</span>
@@ -864,7 +873,7 @@
 
     <!-- ══ SECTION 4 — TARGET ZONES ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.12);color:var(--accent);">
         <i data-lucide="map-pin"></i>
       </div>
       <div>
@@ -877,7 +886,7 @@
 
     <!-- FPT City — featured card full width -->
     <div class="zone-card"
-      style="border-color:rgba(200,245,90,0.35);background:linear-gradient(135deg,rgba(200,245,90,0.06) 0%,var(--surface) 100%);margin-bottom:12px;">
+      style="border-color:rgba(242,201,76,0.4);background:linear-gradient(135deg,rgba(242,201,76,0.05) 0%,var(--surface) 100%);margin-bottom:12px;">
       <div
         style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:1rem;">
         <div style="display:flex;align-items:center;gap:12px;">
@@ -887,7 +896,7 @@
             <div class="zone-name" style="margin-bottom:3px;">
               <span style="font-size:17px;">FPT City · Ngu Hanh Son</span>
             </div>
-            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;color:var(--muted);">
               <span class="fr">181 ha · urban tech township · Hoa Hai · au bord de la riviere Co Co</span>
               <span class="en">181 ha · urban tech township · Hoa Hai · Co Co riverside</span>
             </div>
@@ -903,7 +912,7 @@
       <div class="grid-2" style="gap:1rem;margin-bottom:1rem;">
         <div>
           <div class="zone-desc fr" style="font-size:13px;line-height:1.7;">
-            <strong style="color:var(--text);">FPT City</strong> est un vaste quartier multi-fonction développé à 100%
+            <strong style="color:var(--text-strong);">FPT City</strong> est un vaste quartier multi-fonction développé à 100%
             par le groupe FPT Corporation (IT, télécom, éducation, immobilier). Modèle <em>live-work-study</em> :
             résidentiel haut de gamme (FPT Plaza 1–4), campus FPT Software, FPT University et écoles. Reconnu
             officiellement comme <strong style="color:var(--accent);">parc IT centralisé par le gouvernement vietnamien
@@ -911,7 +920,7 @@
             clientèle tech premium. Un café vient d'ouvrir au Plaza 1.
           </div>
           <div class="zone-desc en" style="font-size:13px;line-height:1.7;">
-            <strong style="color:var(--text);">FPT City</strong> is a large multi-function township developed 100% by
+            <strong style="color:var(--text-strong);">FPT City</strong> is a large multi-function township developed 100% by
             FPT Corporation (IT, telecom, education, real estate). <em>Live-work-study</em> model: premium residential
             (FPT Plaza 1–4), FPT Software campus, FPT University and schools. Officially recognized as a <strong
               style="color:var(--accent);">centralized IT park by the Vietnamese government in 2023</strong> — tax
@@ -922,7 +931,7 @@
         <div>
           <div style="background:var(--surface2);border-radius:10px;padding:0.85rem 1rem;">
             <div
-              style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.6rem;">
+              style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:0.6rem;">
               <span class="fr">Pourquoi c'est stratégique</span>
               <span class="en">Why this is strategic</span>
             </div>
@@ -936,12 +945,12 @@
                   class="en">No padel club in the area</span></li>
               <li><span class="marker pos">+</span><span class="fr">Espaces commerciaux disponibles, accès
                   facile</span><span class="en">Commercial spaces available, easy access</span></li>
-              <li><span class="marker pos">+</span><span class="fr">Synergie "Chiquita Academy" dans un hub
-                  tech</span><span class="en">"Chiquita Academy" synergy in a tech hub</span></li>
+              <li><span class="marker pos">+</span><span class="fr">Synergie "Oasis Padel Academy" dans un hub
+                  tech</span><span class="en">"Oasis Padel Academy" synergy in a tech hub</span></li>
             </ul>
           </div>
           <div
-            style="margin-top:8px;padding:8px 12px;background:rgba(200,245,90,0.08);border:1px solid rgba(200,245,90,0.2);border-radius:8px;font-size:12px;font-family:'DM Mono',monospace;color:var(--accent);">
+            style="margin-top:8px;padding:8px 12px;background:rgba(242,201,76,0.08);border:1px solid rgba(242,201,76,0.22);border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--accent);">
             <span class="fr">Contact terrain FPT City : 0948 958 595</span>
             <span class="en">FPT City land contact: 0948 958 595</span>
           </div>
@@ -995,7 +1004,7 @@
 
     <!-- ══ SECTION 5 — STRATÉGIE FONCIÈRE ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(167,139,250,0.12);color:var(--purple);">
+      <div class="section-icon" style="background:rgba(180,154,232,0.12);color:var(--purple);">
         <i data-lucide="warehouse"></i>
       </div>
       <div>
@@ -1008,21 +1017,21 @@
 
     <!-- Legal constraint callout -->
     <div class="callout"
-      style="border-color:rgba(255,107,53,0.35);background:rgba(255,107,53,0.06);margin-bottom:1.25rem;">
-      <div class="callout-icon" style="color:var(--accent2);"><i data-lucide="shield-alert"></i></div>
+      style="border-color:rgba(242,201,76,0.35);background:rgba(242,201,76,0.05);margin-bottom:1.25rem;">
+      <div class="callout-icon" style="color:var(--accent);"><i data-lucide="shield-alert"></i></div>
       <div>
         <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);">
           <strong>Contrainte légale FDI.</strong>
           <span style="color:var(--muted);">En tant que société à investissement étranger, il est impossible de signer
             un bail directement avec un particulier sur un terrain agricole ou résidentiel. Le bien doit impérativement
-            être classé <strong style="color:var(--text);">"usage commercial" ou "industriel"</strong> pour que la
+            être classé <strong style="color:var(--text-strong);">"usage commercial" ou "industriel"</strong> pour que la
             location soit valide.</span>
         </p>
         <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);">
           <strong>FDI Legal Constraint.</strong>
           <span style="color:var(--muted);">As a foreign-invested company, it is not possible to sign a lease directly
             with a private individual on agricultural or residential land. The property must be officially classified as
-            <strong style="color:var(--text);">"commercial" or "industrial" use</strong> for the lease to be
+            <strong style="color:var(--text-strong);">"commercial" or "industrial" use</strong> for the lease to be
             valid.</span>
         </p>
       </div>
@@ -1033,19 +1042,19 @@
 
       <!-- PRIORITY: Private family warehouse -->
       <div class="constr-card"
-        style="border-color:rgba(200,245,90,0.3);background:linear-gradient(135deg,rgba(200,245,90,0.04) 0%,var(--surface) 100%);">
+        style="border-color:rgba(242,201,76,0.32);background:linear-gradient(135deg,rgba(242,201,76,0.04) 0%,var(--surface) 100%);">
         <div class="constr-title">
           <span style="font-size:18px;">🏭</span>
           <div style="flex:1;">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <span class="fr" style="font-size:15px;font-weight:700;">Entrepôt familial privé</span>
-              <span class="en" style="font-size:15px;font-weight:700;">Private family warehouse</span>
+              <span class="fr" style="font-size:15px;font-weight:700;color:var(--text-strong);">Entrepôt familial privé</span>
+              <span class="en" style="font-size:15px;font-weight:700;color:var(--text-strong);">Private family warehouse</span>
               <span class="opt-tag accent fr">PISTE PRIORITAIRE</span>
               <span class="opt-tag accent en">PRIORITY PATH</span>
             </div>
-            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;" class="fr">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;color:var(--muted);margin-top:3px;" class="fr">
               Location directe · classé commercial/industriel</div>
-            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;" class="en">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;color:var(--muted);margin-top:3px;" class="en">
               Direct lease · classified commercial/industrial</div>
           </div>
         </div>
@@ -1072,17 +1081,17 @@
       </div>
 
       <!-- DEAD END: IPA -->
-      <div class="constr-card" style="border-color:rgba(255,68,68,0.2);opacity:0.85;">
+      <div class="constr-card" style="border-color:rgba(226,100,100,0.25);opacity:0.85;">
         <div class="constr-title">
           <span style="font-size:18px;">🏗</span>
           <div style="flex:1;">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <span class="fr" style="font-size:15px;font-weight:700;">Bail FDI via l'IPA</span>
-              <span class="en" style="font-size:15px;font-weight:700;">FDI Lease via IPA</span>
+              <span class="fr" style="font-size:15px;font-weight:700;color:var(--text-strong);">Bail FDI via l'IPA</span>
+              <span class="en" style="font-size:15px;font-weight:700;color:var(--text-strong);">FDI Lease via IPA</span>
               <span class="opt-tag red fr">IMPASSE</span>
               <span class="opt-tag red en">DEAD END</span>
             </div>
-            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;">IPA Da Nang ·
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:11px;color:var(--muted);margin-top:3px;">IPA Da Nang ·
               zone industrielle</div>
           </div>
         </div>
@@ -1111,27 +1120,27 @@
 
     <!-- Action callout -->
     <div class="callout accent" style="margin-bottom:2rem;">
-      <div class="callout-icon"><i data-lucide="crosshair"></i></div>
+      <div class="callout-icon" style="color:var(--accent);"><i data-lucide="crosshair"></i></div>
       <div>
-        <p class="fr" style="font-size:13px;line-height:1.65;">
+        <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);">
           <strong>Action prioritaire :</strong>
           <span style="color:var(--muted);">identifier des entrepôts/warehouses de famille classés "commercial" ou
             "industriel" dans les zones Ngũ Hành Sơn, My An, An Thuong — en prospection directe, hors agence. L'objectif
-            est de sécuriser un bien entre <strong style="color:var(--text);">3 500$ et 5 000$/mois</strong>, avec une
+            est de sécuriser un bien entre <strong style="color:var(--text-strong);">3 500$ et 5 000$/mois</strong>, avec une
             hauteur sous plafond ≥ 8 m.</span>
         </p>
-        <p class="en" style="font-size:13px;line-height:1.65;">
+        <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);">
           <strong>Priority action:</strong>
           <span style="color:var(--muted);">identify family-owned warehouses classified as "commercial" or "industrial"
             in Ngũ Hành Sơn, My An, An Thuong — direct prospecting, no agency. Target: secure a property at <strong
-              style="color:var(--text);">$3,500–$5,000/month</strong>, minimum 8 m ceiling height.</span>
+              style="color:var(--text-strong);">$3,500–$5,000/month</strong>, minimum 8 m ceiling height.</span>
         </p>
       </div>
     </div>
 
     <!-- Typhoon callout preserved -->
     <div class="callout warn" style="margin-bottom:2rem;">
-      <div class="callout-icon"><i data-lucide="cloud-lightning"></i></div>
+      <div class="callout-icon" style="color:var(--accent);"><i data-lucide="cloud-lightning"></i></div>
       <div>
         <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);">Da Nang est touché par des
           <strong>tempêtes et inondations quasi-annuels (juillet – septembre)</strong>. La construction doit être
@@ -1145,7 +1154,7 @@
 
     <!-- ══ SECTION 6 — STATUS & NEXT STEPS ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(77,255,145,0.1);color:var(--green);">
+      <div class="section-icon" style="background:rgba(127,214,143,0.1);color:var(--green);">
         <i data-lucide="activity"></i>
       </div>
       <div>
@@ -1185,8 +1194,8 @@
             risquée)</span>
           <span class="status-action en">IPA Da Nang — contacted, no response → path dropped (too long, too
             risky)</span>
-          <span class="status-badge fr" style="background:rgba(255,68,68,0.1);color:var(--red);">✗ Abandonné</span>
-          <span class="status-badge en" style="background:rgba(255,68,68,0.1);color:var(--red);">✗ Dropped</span>
+          <span class="status-badge fr" style="background:rgba(226,100,100,0.1);color:var(--red);">✗ Abandonné</span>
+          <span class="status-badge en" style="background:rgba(226,100,100,0.1);color:var(--red);">✗ Dropped</span>
         </div>
         <div class="status-row">
           <span class="status-action fr">Contact local Da Nang — amie de la femme de Julien (background paralegal, mari
@@ -1220,12 +1229,12 @@
     </div>
 
     <div class="callout accent">
-      <div class="callout-icon"><i data-lucide="trending-down"></i></div>
+      <div class="callout-icon" style="color:var(--accent);"><i data-lucide="trending-down"></i></div>
       <div>
-        <p class="fr" style="font-size:13px;line-height:1.65;"><strong>Le loyer est le levier financier le plus critique
+        <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>Le loyer est le levier financier le plus critique
             du projet.</strong> <span style="color:var(--muted);">Chaque 1 000$ de loyer en moins représente environ 1
             an de ROI gagné.</span></p>
-        <p class="en" style="font-size:13px;line-height:1.65;"><strong>Rent is the most critical financial lever in this
+        <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>Rent is the most critical financial lever in this
             project.</strong> <span style="color:var(--muted);">Every $1,000 less in monthly rent equals approximately 1
             year of ROI gained.</span></p>
       </div>
@@ -1235,7 +1244,7 @@
 
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <div class="footer">
-    Chiquita Academy · Da Nang, Vietnam · Business Plan 2026<br>
+    Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2026<br>
     <span class="fr">Tous droits réservés</span>
     <span class="en">All rights reserved</span>
   </div>
@@ -1255,7 +1264,6 @@
       var isOpen = nav.classList.contains('open');
       nav.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', String(!isOpen));
-      
     }
     document.addEventListener('click', function (e) {
       var nav = document.getElementById('mobile-nav');
@@ -1263,13 +1271,12 @@
       if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-        
       }
     });
 
     // ── Language toggle ──────────────────────────────────────
     function setLang(lang) {
-      localStorage.setItem('chiquita-lang', lang);
+      localStorage.setItem('oasis-lang', lang);
       document.documentElement.lang = lang;
       document.documentElement.className = 'lang-' + lang;
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
@@ -1277,7 +1284,7 @@
     }
 
     (function () {
-      var lang = localStorage.getItem('chiquita-lang') || 'fr';
+      var lang = localStorage.getItem('oasis-lang') || 'fr';
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     })();

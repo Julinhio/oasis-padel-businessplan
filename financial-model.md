@@ -1,4 +1,4 @@
-# Chiquita Academy — Modèle Financier
+# Oasis Padel Academy — Modèle Financier
 **Da Nang, Vietnam · Business Plan 2026**
 
 ---

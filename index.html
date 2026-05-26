@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiquita Academy — Executive Summary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Padel Academy — Executive Summary</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Prevent flash of wrong language -->
     <script>
         (function () {
-            var l = localStorage.getItem('chiquita-lang') || 'fr';
+            var l = localStorage.getItem('oasis-lang') || 'fr';
             document.documentElement.lang = l;
             document.documentElement.className = 'lang-' + l;
         })();
@@ -32,10 +32,10 @@
             border-radius: 8px;
             cursor: pointer;
             color: var(--text);
-            font-family: 'Syne', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             flex-shrink: 0;
             transition: opacity 0.15s;
@@ -57,7 +57,7 @@
             top: 56px;
             left: 0;
             right: 0;
-            background: rgba(245, 236, 215, 0.98);
+            background: rgba(28, 28, 28, 0.96);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             z-index: 99;
@@ -85,12 +85,12 @@
 
         .mobile-nav a:hover {
             color: var(--text);
-            background: rgba(6, 8, 38, 0.04);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .mobile-nav a.active {
             color: var(--accent);
-            background: rgba(242, 125, 22, 0.06);
+            background: rgba(242, 201, 76, 0.08);
         }
 
         @media (max-width: 700px) {
@@ -106,7 +106,7 @@
         .nav-logo-icon svg {
             width: 18px;
             height: 18px;
-            stroke: #060826;
+            stroke: currentColor;
             stroke-width: 2.5;
             display: block;
         }
@@ -134,16 +134,6 @@
             stroke-width: 2;
             display: block;
         }
-
-        /* Logo icon: dark stroke on orange pill */
-        .nav-logo-icon svg {
-            stroke: #060826;
-        }
-
-        /* Noise stays subtle on navy */
-        .noise {
-            opacity: 0.025;
-        }
     </style>
 </head>
 
@@ -155,7 +145,7 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-                <span class="nav-logo-text">Chiquita</span>
+                <span class="nav-logo-text">OASIS</span>
             </a>
             <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu"
                 aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
@@ -189,11 +179,8 @@
     <!-- ── PAGE HEADER ────────────────────────────────────────── -->
     <div class="page-header">
         <div class="page-header-inner">
-            <div
-                style="font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:1rem;letter-spacing:0.06em;">
-                Da Nang, Vietnam · 2025
-            </div>
-            <h1>Chiquita <span>- Padel Academy</span></h1>
+            <div class="page-subtitle">Da Nang, Vietnam · 2025</div>
+            <h1>Oasis <span>- Padel Academy</span></h1>
             <p class="page-tagline fr">Le premier club de padel premium de Da Nang</p>
             <p class="page-tagline en">Da Nang's first premium padel club</p>
             <p class="page-subtitle" style="margin-top:0.75rem;">
@@ -208,8 +195,8 @@
 
         <!-- OPEN TO INVESTORS — BANNER -->
         <div style="
-            background: var(--surface2);
-            border: 1px solid var(--border2);
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 14px;
             padding: 1.4rem 1.75rem;
             margin-bottom: 2rem;
@@ -222,28 +209,28 @@
                 width: 44px;
                 height: 44px;
                 border-radius: 10px;
-                background: var(--surface);
-                border: 1px solid var(--border2);
+                background: rgba(242, 201, 76, 0.08);
+                border: 1px solid rgba(242, 201, 76, 0.25);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
-                color: var(--text);
+                color: var(--accent);
             "><i data-lucide="briefcase"
                     style="width:20px;height:20px;stroke:currentColor;stroke-width:2;display:block;"></i></div>
             <div style="flex:1;">
                 <div
-                    style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:4px;">
+                    style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:var(--accent);margin-bottom:6px;">
                     <span class="fr">Ouvert aux investisseurs</span>
                     <span class="en">Open to Investors</span>
                 </div>
-                <div style="font-size:15px;font-weight:600;line-height:1.45;">
-                    <span class="fr">Chiquita Academy recherche des partenaires engagés partageant la vision premium du
+                <div style="font-size:15px;font-weight:600;line-height:1.45;color:var(--text-strong);">
+                    <span class="fr">Oasis Padel Academy recherche des partenaires engagés partageant la vision premium du
                         club.</span>
-                    <span class="en">Chiquita Academy is looking for committed partners who share the club's premium
+                    <span class="en">Oasis Padel Academy is looking for committed partners who share the club's premium
                         vision.</span>
                 </div>
-                <div style="font-size:13px;color:var(--muted);margin-top:4px;">
+                <div style="font-size:13px;color:var(--muted);margin-top:6px;">
                     <span class="fr">Contactez l'équipe pour en savoir plus sur les modalités de participation.</span>
                     <span class="en">Reach out to the team to learn more about participation terms.</span>
                 </div>
@@ -252,7 +239,7 @@
 
         <!-- KEY METRICS -->
         <div class="section-header" style="margin-top:0;">
-            <div class="section-icon" style="background:rgba(200,245,90,0.1);color:var(--accent);"><i
+            <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);"><i
                     data-lucide="bar-chart-2"></i></div>
             <span class="section-title fr">Chiffres clés</span>
             <span class="section-title en">Key Metrics</span>
@@ -293,21 +280,21 @@
 
         <!-- PROJECT SUMMARY -->
         <div class="section-header">
-            <div class="section-icon" style="background:rgba(90,180,255,0.1);color:var(--blue);"><i
+            <div class="section-icon" style="background:rgba(111,176,232,0.1);color:var(--blue);"><i
                     data-lucide="building-2"></i></div>
             <span class="section-title fr">Le projet</span>
             <span class="section-title en">The Project</span>
         </div>
 
         <div class="panel">
-            <p class="fr" style="font-size:15px;line-height:1.75;">
-                Chiquita - Padel Academy Chiquita Padel Academy est un club de padel premium
+            <p class="fr" style="font-size:15px;line-height:1.75;color:var(--text);">
+                Oasis - Padel Academy Oasis Padel Academy est un club de padel premium
                 à Da Nang, Vietnam. Le projet s'articule autour de 4 courts couverts,
                 avec une option 5 courts selon la superficie du site retenu. Restauration rapide, espace wellness (ice
                 bath, sauna), boutique et académie padel. Positionnement lifestyle, clientèle expat et digital nomad.
             </p>
-            <p class="en" style="font-size:15px;line-height:1.75;">
-                Chiquita - Padel Academy is a premium padel club in Da Nang, Vietnam. The project is built around 4
+            <p class="en" style="font-size:15px;line-height:1.75;color:var(--text);">
+                Oasis - Padel Academy is a premium padel club in Da Nang, Vietnam. The project is built around 4
                 indoor courts, with a 5-court option depending on the site. Quick-service restaurant, wellness area (ice
                 bath,
                 sauna), pro shop and padel academy. Lifestyle positioning, targeting expats and digital nomads.
@@ -335,7 +322,7 @@
 
         <!-- MARKET SIGNALS -->
         <div class="section-header">
-            <div class="section-icon" style="background:rgba(77,255,145,0.1);color:var(--green);"><i
+            <div class="section-icon" style="background:rgba(127,214,143,0.1);color:var(--green);"><i
                     data-lucide="map-pin"></i></div>
             <span class="section-title fr">Signaux marché</span>
             <span class="section-title en">Market Signals</span>
@@ -358,12 +345,12 @@
                     <span class="fr"><strong>Hub expat à la croissance la plus rapide d'Asie du Sud-Est</strong><sup><a
                                 href="https://www.foreignersofasia.com/post/da-nang-southeast-asia-s-fastest-growing-expat-hub"
                                 target="_blank" rel="noopener"
-                                style="color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;">↗</a></sup>
+                                style="color:var(--muted);text-decoration:none;font-family:'Space Grotesk',sans-serif;">↗</a></sup>
                         <span style="color:var(--muted);font-size:12px;">Foreigners of Asia, nov. 2025</span></span>
                     <span class="en"><strong>Fastest-growing expat hub in Southeast Asia</strong><sup><a
                                 href="https://www.foreignersofasia.com/post/da-nang-southeast-asia-s-fastest-growing-expat-hub"
                                 target="_blank" rel="noopener"
-                                style="color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;">↗</a></sup>
+                                style="color:var(--muted);text-decoration:none;font-family:'Space Grotesk',sans-serif;">↗</a></sup>
                         <span style="color:var(--muted);font-size:12px;">Foreigners of Asia, Nov 2025</span></span>
                 </div>
             </div>
@@ -373,12 +360,12 @@
                     <span class="fr"><strong>~7 000 digital nomads en 2025, +60% par an</strong><sup><a
                                 href="https://www.topologica.co/articles/bali-vietnam-digital-nomad-shift-2025"
                                 target="_blank" rel="noopener"
-                                style="color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;">↗</a></sup>
+                                style="color:var(--muted);text-decoration:none;font-family:'Space Grotesk',sans-serif;">↗</a></sup>
                         <span style="color:var(--muted);font-size:12px;">Topologica.co, jan. 2025</span></span>
                     <span class="en"><strong>~7,000 digital nomads by 2025, +60% YoY</strong><sup><a
                                 href="https://www.topologica.co/articles/bali-vietnam-digital-nomad-shift-2025"
                                 target="_blank" rel="noopener"
-                                style="color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;">↗</a></sup>
+                                style="color:var(--muted);text-decoration:none;font-family:'Space Grotesk',sans-serif;">↗</a></sup>
                         <span style="color:var(--muted);font-size:12px;">Topologica.co, Jan 2025</span></span>
                 </div>
             </div>
@@ -396,7 +383,7 @@
 
         <!-- TEAM -->
         <div class="section-header">
-            <div class="section-icon" style="background:rgba(200,245,90,0.1);color:var(--accent);"><i
+            <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);"><i
                     data-lucide="users"></i></div>
             <span class="section-title fr">L'équipe</span>
             <span class="section-title en">The Team</span>
@@ -434,7 +421,7 @@
 
     <!-- ── FOOTER ──────────────────────────────────────────────── -->
     <div class="footer">
-        Chiquita Academy · Da Nang, Vietnam · Business Plan 2026<br>
+        Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2026<br>
         <span class="fr">Tous droits réservés</span>
         <span class="en">All rights reserved</span>
     </div>
@@ -455,24 +442,20 @@
             var isOpen = nav.classList.contains('open');
             nav.classList.toggle('open', !isOpen);
             btn.setAttribute('aria-expanded', String(!isOpen));
-            // swap icon
-
         }
 
-        // Close drawer on outside click
         document.addEventListener('click', function (e) {
             var nav = document.getElementById('mobile-nav');
             var btn = document.getElementById('hamburger-btn');
             if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
                 nav.classList.remove('open');
                 btn.setAttribute('aria-expanded', 'false');
-
             }
         });
 
         // ── Language toggle ──────────────────────────────────────
         function setLang(lang) {
-            localStorage.setItem('chiquita-lang', lang);
+            localStorage.setItem('oasis-lang', lang);
             document.documentElement.lang = lang;
             document.documentElement.className = 'lang-' + lang;
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
@@ -481,7 +464,7 @@
 
         // Init button states on load
         (function () {
-            var lang = localStorage.getItem('chiquita-lang') || 'fr';
+            var lang = localStorage.getItem('oasis-lang') || 'fr';
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
         })();

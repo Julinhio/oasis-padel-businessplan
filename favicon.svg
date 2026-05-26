@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <!-- Background -->
-  <rect width="32" height="32" rx="7" fill="#060826"/>
+  <rect width="32" height="32" rx="7" fill="#1C1C1C"/>
 
   <!-- Racket head (tilted ~30°) -->
   <g transform="translate(15,15) rotate(-30)">
-    <rect x="-7" y="-11" width="14" height="16" rx="5" fill="#f27d16"/>
+    <rect x="-7" y="-11" width="14" height="16" rx="5" fill="#F0EAE0"/>
     <!-- Holes 2×2 grid -->
-    <circle cx="-2.8" cy="-6.5" r="1.5" fill="#060826"/>
-    <circle cx=" 2.8" cy="-6.5" r="1.5" fill="#060826"/>
-    <circle cx="-2.8" cy="-1.5" r="1.5" fill="#060826"/>
-    <circle cx=" 2.8" cy="-1.5" r="1.5" fill="#060826"/>
+    <circle cx="-2.8" cy="-6.5" r="1.5" fill="#1C1C1C"/>
+    <circle cx=" 2.8" cy="-6.5" r="1.5" fill="#1C1C1C"/>
+    <circle cx="-2.8" cy="-1.5" r="1.5" fill="#1C1C1C"/>
+    <circle cx=" 2.8" cy="-1.5" r="1.5" fill="#1C1C1C"/>
     <!-- Handle -->
-    <rect x="-2.5" y="5" width="5" height="9" rx="2" fill="#c8f55a"/>
+    <rect x="-2.5" y="5" width="5" height="9" rx="2" fill="#A09080"/>
   </g>
 
-  <!-- Ball -->
-  <circle cx="24" cy="7" r="4" fill="#c8f55a"/>
-  <path d="M21.2 5.5 Q24 8 21.2 10.5" stroke="#060826" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <!-- Ball (yellow sun accent) -->
+  <circle cx="24" cy="7" r="4" fill="#F2C94C"/>
+  <path d="M21.2 5.5 Q24 8 21.2 10.5" stroke="#1C1C1C" stroke-width="0.8" fill="none" stroke-linecap="round"/>
 </svg>

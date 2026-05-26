@@ -5,26 +5,27 @@
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiquita Club — Notes de Discovery</title>
+    <title>Oasis Club — Notes de Discovery</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --bg: #060826;
-            --surface: #161616;
-            --surface2: #1e1e1e;
+            --bg: #1C1C1C;
+            --surface: #232323;
+            --surface2: #2E2E2E;
             --border: rgba(255, 255, 255, 0.08);
-            --border2: rgba(255, 255, 255, 0.14);
-            --text: #f0ede8;
-            --muted: #888;
-            --accent: #c8f55a;
-            --accent2: #ff6b35;
-            --red: #ff4444;
-            --green: #4dff91;
-            --blue: #5ab4ff;
-            --purple: #a78bfa;
-            --pink: #f472b6;
+            --border2: rgba(255, 255, 255, 0.16);
+            --text: #F0EAE0;
+            --text-strong: #FFFFFF;
+            --muted: #A09080;
+            --accent: #F2C94C;
+            --accent2: #F2C94C;
+            --red: #E26464;
+            --green: #7FD68F;
+            --blue: #6FB0E8;
+            --purple: #B49AE8;
+            --pink: #E89CC2;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,10 +34,11 @@
         body {
             background: var(--bg);
             color: var(--text);
-            font-family: 'Syne', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 15px;
             line-height: 1.6;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
 
         .noise {
@@ -45,7 +47,8 @@
             pointer-events: none;
             z-index: 0;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-            opacity: 0.4;
+            opacity: 0.025;
+            mix-blend-mode: screen;
         }
 
         .header {
@@ -86,7 +89,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 12px;
             color: var(--muted);
             text-decoration: none;
@@ -99,14 +102,16 @@
         .back-link:hover {
             color: var(--accent);
             border-color: var(--accent);
-            background: rgba(242, 125, 22, 0.06);
+            background: rgba(242, 201, 76, 0.08);
         }
 
         h1 {
-            font-size: clamp(28px, 5vw, 44px);
-            font-weight: 700;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
             letter-spacing: -0.02em;
-            line-height: 1.1;
+            line-height: 0.98;
+            color: var(--text-strong);
             margin-top: 2rem;
         }
 
@@ -116,7 +121,8 @@
             color: var(--muted);
             font-size: 14px;
             margin-top: 6px;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: 0.06em;
         }
 
         .main {
@@ -197,7 +203,7 @@
         .team-role {
             font-size: 12px;
             color: var(--muted);
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             line-height: 1.5;
         }
 
@@ -217,14 +223,14 @@
         }
 
         .stat-card.accent { border-color: var(--accent); }
-        .stat-card.blue { border-color: rgba(90, 180, 255, 0.4); }
-        .stat-card.orange { border-color: rgba(255, 107, 53, 0.4); }
-        .stat-card.green { border-color: rgba(77, 255, 145, 0.3); }
+        .stat-card.blue { border-color: rgba(111, 176, 232, 0.4); }
+        .stat-card.orange { border-color: rgba(242, 201, 76, 0.4); }
+        .stat-card.green { border-color: rgba(127, 214, 143, 0.3); }
 
         .stat-val {
             font-size: 24px;
             font-weight: 700;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             line-height: 1.1;
             margin-bottom: 4px;
         }
@@ -255,7 +261,7 @@
         .row-item:last-child { border-bottom: none; }
         .row-item .lbl { color: var(--muted); flex: 1; }
         .row-item .val {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-weight: 500;
             text-align: right;
         }
@@ -278,7 +284,7 @@
         }
 
         .total-row .val {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 17px;
         }
 
@@ -306,20 +312,20 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        .tag.acc { background: rgba(242, 125, 22, 0.12); color: var(--accent); }
-        .tag.red { background: rgba(255, 68, 68, 0.12); color: var(--red); }
-        .tag.orange { background: rgba(255, 107, 53, 0.12); color: var(--accent2); }
-        .tag.blue { background: rgba(90, 180, 255, 0.12); color: var(--blue); }
-        .tag.green { background: rgba(77, 255, 145, 0.12); color: var(--green); }
-        .tag.purple { background: rgba(167, 139, 250, 0.12); color: var(--purple); }
+        .tag.acc { background: rgba(242, 201, 76, 0.12); color: var(--accent); }
+        .tag.red { background: rgba(226, 100, 100, 0.12); color: var(--red); }
+        .tag.orange { background: rgba(242, 201, 76, 0.12); color: var(--accent2); }
+        .tag.blue { background: rgba(111, 176, 232, 0.12); color: var(--blue); }
+        .tag.green { background: rgba(127, 214, 143, 0.12); color: var(--green); }
+        .tag.purple { background: rgba(180, 154, 232, 0.12); color: var(--purple); }
 
         /* Signal callout */
         .signal-box {
-            background: rgba(242, 125, 22, 0.05);
-            border: 1px solid rgba(242, 125, 22, 0.2);
+            background: rgba(242, 201, 76, 0.05);
+            border: 1px solid rgba(242, 201, 76, 0.2);
             border-radius: 12px;
             padding: 1.25rem 1.5rem;
             margin-bottom: 1rem;
@@ -353,7 +359,7 @@
         .risk-item:last-child { border-bottom: none; }
 
         .risk-num {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 13px;
             color: var(--red);
             width: 20px;
@@ -398,7 +404,7 @@
         }
 
         .opt-who {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             padding: 2px 8px;
             border-radius: 5px;
@@ -406,9 +412,9 @@
             margin-top: 1px;
         }
 
-        .opt-who.pascal { background: rgba(90, 180, 255, 0.15); color: var(--blue); }
-        .opt-who.julien { background: rgba(242, 125, 22, 0.12); color: var(--accent); }
-        .opt-who.retenu { background: rgba(77, 255, 145, 0.12); color: var(--green); font-weight: 600; }
+        .opt-who.pascal { background: rgba(111, 176, 232, 0.15); color: var(--blue); }
+        .opt-who.julien { background: rgba(242, 201, 76, 0.12); color: var(--accent); }
+        .opt-who.retenu { background: rgba(127, 214, 143, 0.12); color: var(--green); font-weight: 600; }
 
         /* Next steps */
         .steps-list {
@@ -436,7 +442,7 @@
         }
 
         .step-who {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             color: var(--muted);
             margin-left: auto;
@@ -464,19 +470,19 @@
         .price-table td {
             padding: 10px 12px;
             border-bottom: 1px solid var(--border);
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .price-table tr:last-child td { border-bottom: none; }
 
         .price-table td:first-child {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Inter', sans-serif;
             color: var(--muted);
         }
 
         .price-table .highlight-row td {
             color: var(--accent);
-            background: rgba(242, 125, 22, 0.04);
+            background: rgba(242, 201, 76, 0.04);
         }
 
         /* Invest bars */
@@ -509,9 +515,9 @@
             align-items: center;
             padding-left: 10px;
             font-size: 12px;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-weight: 500;
-            color: #060826;
+            color: var(--bg);
             white-space: nowrap;
         }
 
@@ -561,13 +567,13 @@
         }
 
         .city-price {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 12px;
             color: var(--muted);
         }
 
         .city-badge {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             flex-shrink: 0;
         }
@@ -577,7 +583,7 @@
             padding: 3rem 2rem;
             color: var(--muted);
             font-size: 12px;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             border-top: 1px solid var(--border);
             position: relative;
             z-index: 1;
@@ -601,11 +607,11 @@
             <div>
                 <div class="logo">
                     <div class="logo-icon">🏸</div>
-                    <span style="font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Chiquita Club</span>
+                    <span style="font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Oasis Club</span>
                 </div>
             </div>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-                <span style="font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);">Da Nang · Mars 2025 · v1.0</span>
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--muted);">Da Nang · Mars 2025 · v1.0</span>
                 <a href="index.html" class="back-link">← Modèle Financier</a>
             </div>
         </div>
@@ -871,7 +877,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div style="margin-top:12px;font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;">
+                <div style="margin-top:12px;font-size:12px;color:var(--muted);font-family:'Space Grotesk',sans-serif;">
                     Créneaux quasi-exclusivement 90 ou 120 min → <span style="color:var(--accent);">36$/créneau 90 min retenu dans le modèle</span>
                 </div>
             </div>
@@ -901,7 +907,7 @@
                     </div>
                     <span class="city-badge" style="color:var(--purple);">Émergent</span>
                 </div>
-                <div style="margin-top:12px;font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;">
+                <div style="margin-top:12px;font-size:12px;color:var(--muted);font-family:'Space Grotesk',sans-serif;">
                     Da Nang = territoire de pricing international<br>
                     <span style="color:var(--text);">comparable Espagne/France, Bali/Thaïlande</span>
                 </div>
@@ -968,30 +974,30 @@
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
                 <div style="background:var(--surface2);border-radius:10px;padding:1rem;">
                     <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Manager</div>
-                    <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent);">~600 $</div>
+                    <div style="font-size:18px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--accent);">~600 $</div>
                     <div style="font-size:11px;color:var(--muted);margin-top:2px;">×1</div>
                 </div>
                 <div style="background:var(--surface2);border-radius:10px;padding:1rem;">
                     <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Réceptionnistes</div>
-                    <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--blue);">~700 $</div>
+                    <div style="font-size:18px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--blue);">~700 $</div>
                     <div style="font-size:11px;color:var(--muted);margin-top:2px;">×2 · 350$/pers.</div>
                 </div>
                 <div style="background:var(--surface2);border-radius:10px;padding:1rem;">
                     <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Coachs (VN)</div>
-                    <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--purple);">~1 000 $</div>
+                    <div style="font-size:18px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--purple);">~1 000 $</div>
                     <div style="font-size:11px;color:var(--muted);margin-top:2px;">×2 · 500$/pers.</div>
                 </div>
                 <div style="background:var(--surface2);border-radius:10px;padding:1rem;">
                     <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Maintenance</div>
-                    <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--green);">~560 $</div>
+                    <div style="font-size:18px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--green);">~560 $</div>
                     <div style="font-size:11px;color:var(--muted);margin-top:2px;">×2 · 280$/pers.</div>
                 </div>
             </div>
             <div style="display:flex;justify-content:space-between;padding:12px 0 0;margin-top:8px;border-top:1px solid var(--border2);font-size:15px;font-weight:600;">
                 <span>Total staff mensuel</span>
-                <span style="font-family:'DM Mono',monospace;color:var(--accent);">~2 860 $</span>
+                <span style="font-family:'Space Grotesk',sans-serif;color:var(--accent);">~2 860 $</span>
             </div>
-            <div style="margin-top:8px;font-size:12px;color:var(--orange);font-family:'DM Mono',monospace;color:var(--accent2);">
+            <div style="margin-top:8px;font-size:12px;color:var(--orange);font-family:'Space Grotesk',sans-serif;color:var(--accent2);">
                 ⚠ Un coach expat peut tripler le poste coachs. À décider.
             </div>
         </div>
@@ -1227,20 +1233,20 @@
     </div>
 
     <div class="footer">
-        Chiquita Club · Da Nang, Vietnam · Notes de Discovery v1.0 · Mars 2025<br>
+        Oasis Club · Da Nang, Vietnam · Notes de Discovery v1.0 · Mars 2025<br>
         Document de travail interne
     </div>
 
     <script>
         const investData = [
-            { label: '4 courts + shipping + taxes', val: 50000, color: '#5ab4ff' },
-            { label: 'Construction / aménagement', val: 120000, color: '#c8f55a' },
-            { label: 'Accueil + boutique (45 m²)', val: 20000, color: '#ff6b35' },
-            { label: 'Restauration rapide (45 m²)', val: 25000, color: '#a78bfa' },
-            { label: 'Ice bath + sauna', val: 20000, color: '#4dff91' },
-            { label: 'Mobilier, déco, lumières', val: 25000, color: '#fbbf24' },
-            { label: 'Fonds de roulement (3 mois)', val: 30000, color: '#f472b6' },
-            { label: 'Imprévus (10%)', val: 29000, color: '#888' },
+            { label: '4 courts + shipping + taxes', val: 50000, color: '#6FB0E8' },
+            { label: 'Construction / aménagement', val: 120000, color: '#F2C94C' },
+            { label: 'Accueil + boutique (45 m²)', val: 20000, color: '#F2C94C' },
+            { label: 'Restauration rapide (45 m²)', val: 25000, color: '#B49AE8' },
+            { label: 'Ice bath + sauna', val: 20000, color: '#7FD68F' },
+            { label: 'Mobilier, déco, lumières', val: 25000, color: '#F2C94C' },
+            { label: 'Fonds de roulement (3 mois)', val: 30000, color: '#E89CC2' },
+            { label: 'Imprévus (10%)', val: 29000, color: '#A09080' },
         ];
 
         function fmt(v) {
@@ -1260,7 +1266,7 @@
             }).join('') +
             `<div style="display:flex;justify-content:space-between;padding:12px 0 0;margin-top:8px;border-top:1px solid rgba(255,255,255,0.14);font-size:15px;font-weight:600;">
           <span>Total estimé</span>
-          <span style="font-family:'DM Mono',monospace;color:var(--accent);">~ 319 000 $</span>
+          <span style="font-family:'Space Grotesk',sans-serif;color:var(--accent);">~ 319 000 $</span>
         </div>`;
     </script>
 </body>

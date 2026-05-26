@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiquita Academy — Market / Marché</title>
+  <title>Oasis Padel Academy — Market / Marché</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
-      var l = localStorage.getItem('chiquita-lang') || 'fr';
+      var l = localStorage.getItem('oasis-lang') || 'fr';
       document.documentElement.lang = l;
       document.documentElement.className = 'lang-' + l;
     })();
@@ -23,7 +23,7 @@
     .nav-logo-icon svg {
       width: 18px;
       height: 18px;
-      stroke: #060826;
+      stroke: currentColor;
       stroke-width: 2.5;
       display: block;
     }
@@ -54,7 +54,7 @@
 
     /* ── Source superscript link ── */
     .src {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       color: var(--muted);
       text-decoration: none;
@@ -72,18 +72,20 @@
 
     /* ── Section h2 ── */
     .section-h2 {
-      font-size: clamp(17px, 2.8vw, 22px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--text-strong);
       margin: -0.25rem 0 1.25rem;
     }
 
     /* ── Stat card source line ── */
     .stat-source {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       color: var(--muted);
-      font-family: 'DM Mono', monospace;
       margin-top: 5px;
       line-height: 1.5;
     }
@@ -100,15 +102,18 @@
     /* ── Competitor card ── */
     .competitor-panel {
       background: var(--surface);
-      border: 1px solid rgba(255, 107, 53, 0.25);
+      border: 1px solid rgba(226, 100, 100, 0.28);
       border-radius: 14px;
       padding: 1.5rem;
       margin-bottom: 1rem;
     }
 
     .competitor-name {
-      font-size: 17px;
-      font-weight: 700;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: var(--text-strong);
       margin-bottom: 3px;
     }
 
@@ -137,7 +142,6 @@
       position: relative;
     }
 
-    /* connecting line between dots */
     .adoption-track::before {
       content: '';
       position: absolute;
@@ -166,17 +170,17 @@
 
     .dot-muted {
       border-color: var(--muted);
-      background: rgba(136, 136, 136, 0.12);
+      background: rgba(160, 144, 128, 0.12);
     }
 
     .dot-yellow {
-      border-color: var(--yellow);
-      background: rgba(251, 191, 36, 0.1);
+      border-color: var(--accent);
+      background: rgba(242, 201, 76, 0.1);
     }
 
     .dot-orange {
-      border-color: var(--accent2);
-      background: rgba(255, 107, 53, 0.1);
+      border-color: var(--accent);
+      background: rgba(242, 201, 76, 0.1);
     }
 
     .dot-accent {
@@ -185,20 +189,21 @@
       width: 24px;
       height: 24px;
       margin-top: -2px;
-      box-shadow: 0 0 0 5px rgba(242, 125, 22, 0.15);
+      box-shadow: 0 0 0 5px rgba(242, 201, 76, 0.18);
     }
 
     .adoption-name {
       font-size: 13px;
       font-weight: 700;
+      color: var(--text-strong);
       margin-bottom: 4px;
     }
 
     .adoption-status {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
-      font-family: 'DM Mono', monospace;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.1em;
       color: var(--muted);
       margin-bottom: 5px;
     }
@@ -212,15 +217,15 @@
     .adoption-badge {
       display: inline-block;
       margin-top: 7px;
-      padding: 2px 8px;
+      padding: 3px 8px;
       border-radius: 5px;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       background: var(--accent);
-      color: #060826;
-      font-family: 'DM Mono', monospace;
+      color: var(--bg);
     }
 
     /* ── Key fact items ── */
@@ -257,11 +262,11 @@
       border: none;
       background: none;
       padding: 0;
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       color: var(--muted);
       transition: color 0.2s;
       user-select: none;
@@ -302,7 +307,7 @@
     .source-panel-body {
       overflow: hidden;
       max-height: 0;
-      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
       opacity: 0;
     }
 
@@ -342,7 +347,7 @@
     }
 
     .source-claim a {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       color: var(--muted);
       text-decoration: none;
@@ -362,14 +367,14 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.1em;
       padding: 3px 8px;
       border-radius: 5px;
-      background: rgba(77, 255, 145, 0.1);
+      background: rgba(127, 214, 143, 0.1);
       color: var(--green);
       margin-bottom: 0.75rem;
     }
@@ -386,10 +391,10 @@
       border-radius: 8px;
       cursor: pointer;
       color: var(--text);
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       flex-shrink: 0;
       transition: opacity 0.15s;
@@ -410,7 +415,7 @@
       top: 56px;
       left: 0;
       right: 0;
-      background: rgba(245, 236, 215, 0.98);
+      background: rgba(28, 28, 28, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       z-index: 99;
@@ -438,12 +443,12 @@
 
     .mobile-nav a:hover {
       color: var(--text);
-      background: rgba(6, 8, 38, 0.04);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .mobile-nav a.active {
       color: var(--accent);
-      background: rgba(200, 94, 8, 0.06);
+      background: rgba(242, 201, 76, 0.08);
     }
 
     @media (max-width: 700px) {
@@ -466,7 +471,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-        <span class="nav-logo-text">Chiquita</span>
+        <span class="nav-logo-text">OASIS</span>
       </a>
       <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu"
         aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
@@ -500,10 +505,7 @@
   <!-- ── PAGE HEADER ────────────────────────────────────────── -->
   <div class="page-header">
     <div class="page-header-inner">
-      <div
-        style="font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:1rem;letter-spacing:0.06em;">
-        Da Nang · Hội An, Vietnam · 2025
-      </div>
+      <div class="page-subtitle">Da Nang · Hội An, Vietnam · 2025</div>
       <h1>
         <span class="fr">Analyse de <span>Marché</span></span>
         <span class="en"><span>Market</span> Analysis</span>
@@ -520,7 +522,7 @@
          01 · DA NANG OVERVIEW
     ═══════════════════════════════════════════════════════════ -->
     <div class="section-header" style="margin-top:0;">
-      <div class="section-icon" style="background:rgba(77,255,145,0.1);color:var(--green);">
+      <div class="section-icon" style="background:rgba(127,214,143,0.1);color:var(--green);">
         <i data-lucide="map-pin"></i>
       </div>
       <span class="section-title fr">Vue d'ensemble · Da Nang + Hội An</span>
@@ -574,7 +576,7 @@
         </div>
         <div class="row-item">
           <span class="lbl"><span class="fr">Population</span><span class="en">Population</span></span>
-          <span class="val" style="font-family:'DM Mono',monospace;color:var(--text);">~1.3M</span>
+          <span class="val" style="color:var(--text-strong);">~1.3M</span>
         </div>
         <div class="row-item">
           <span class="lbl"><span class="fr">Touristes étrangers 2024</span><span class="en">Foreign tourists
@@ -594,12 +596,12 @@
       </div>
 
       <!-- Hoi An -->
-      <div class="panel" style="margin-bottom:0;border-color:rgba(200,245,90,0.2);">
+      <div class="panel" style="margin-bottom:0;border-color:rgba(242,201,76,0.22);">
         <div class="panel-title" style="display:flex;align-items:center;gap:8px;">
           <span style="color:var(--accent);">●</span>
           Hội An
           <span class="tag"
-            style="background:rgba(200,245,90,0.12);color:var(--accent);border:1px solid rgba(200,245,90,0.25);font-size:10px;padding:2px 7px;border-radius:5px;margin-left:4px;">
+            style="background:rgba(242,201,76,0.1);color:var(--accent);border:1px solid rgba(242,201,76,0.28);font-size:10px;padding:2px 7px;border-radius:5px;margin-left:4px;">
             <span class="fr">Marché vierge</span><span class="en">Untapped market</span>
           </span>
         </div>
@@ -611,23 +613,23 @@
         <div class="row-item">
           <span class="lbl"><span class="fr">Coût de vie mensuel</span><span class="en">Monthly cost of
               living</span></span>
-          <span class="val" style="font-family:'DM Mono',monospace;color:var(--text);">~909$/mois</span>
+          <span class="val" style="color:var(--text-strong);">~909$/mois</span>
         </div>
         <div class="row-item">
           <span class="lbl"><span class="fr">Distance Da Nang</span><span class="en">Distance from Da Nang</span></span>
-          <span class="val" style="font-family:'DM Mono',monospace;color:var(--text);">30 min</span>
+          <span class="val" style="color:var(--text-strong);">30 min</span>
         </div>
         <div class="row-item" style="border-bottom:none;">
           <span class="lbl"><span class="fr">Clubs padel existants</span><span class="en">Existing padel
               clubs</span></span>
           <span class="val"
-            style="color:var(--green);font-family:'DM Mono',monospace;font-size:16px;font-weight:700;">0</span>
+            style="color:var(--green);font-size:16px;font-weight:700;">0</span>
         </div>
       </div>
     </div>
 
     <div class="panel">
-      <p class="fr" style="font-size:15px;line-height:1.75;">
+      <p class="fr" style="font-size:15px;line-height:1.75;color:var(--text);">
         Da Nang et Hội An forment une zone de chalandise combinée exceptionnelle : <strong
           style="color:var(--accent);">9 000+ résidents étrangers</strong>, 6,8M de visiteurs internationaux par an, et
         <strong style="color:var(--accent);">zéro offre padel à Hội An</strong>. Da Nang est la zone expat à la
@@ -635,7 +637,7 @@
         top 5 mondial des destinations digital nomads, attire un profil premium à faible sensibilité prix — et n'a
         aucune infrastructure sportive haut de gamme.
       </p>
-      <p class="en" style="font-size:15px;line-height:1.75;">
+      <p class="en" style="font-size:15px;line-height:1.75;color:var(--text);">
         Da Nang and Hội An form an exceptional combined catchment area: <strong style="color:var(--accent);">9,000+
           foreign residents</strong>, 6.8M international visitors per year, and <strong
           style="color:var(--accent);">zero padel in Hội An</strong>. Da Nang is Southeast Asia's fastest-growing expat
@@ -748,7 +750,7 @@
          02 · PADEL GLOBAL & ASIA
     ═══════════════════════════════════════════════════════════ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(200,245,90,0.1);color:var(--accent);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="trending-up"></i>
       </div>
       <span class="section-title fr">Padel mondial &amp; Asie</span>
@@ -767,11 +769,11 @@
           <span class="lbl"><span class="fr">Joueurs dans le monde (2025)</span><span class="en">Players worldwide
               (2025)</span></span>
           <span class="val acc">35M
-            <span style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;"> ↑ 25M en 2022</span>
+            <span style="font-size:11px;color:var(--muted);"> ↑ 25M en 2022</span>
           </span>
         </div>
         <div class="row-item" style="padding-top:4px;padding-bottom:4px;">
-          <span class="lbl" style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;"><span
+          <span class="lbl" style="font-size:11px;color:var(--muted);"><span
               class="fr">Source : FIP (Fédération Internationale de Padel)</span><span class="en">Source: FIP
               (International Padel Federation)</span></span>
           <span></span>
@@ -833,7 +835,7 @@
           <span class="lbl"><span class="fr">1er tournoi FIP officiel au Vietnam</span><span class="en">1st official FIP
               tournament in Vietnam</span></span>
           <span class="val"
-            style="color:var(--text);font-size:12px;text-align:right;font-family:'DM Mono',monospace;line-height:1.4;">
+            style="color:var(--text);font-size:12px;text-align:right;line-height:1.4;">
             <span class="fr">Padel Vietnam Open<br>HCMC · déc. 2025</span>
             <span class="en">Padel Vietnam Open<br>HCMC · Dec 2025</span>
           </span>
@@ -861,7 +863,7 @@
          03 · COMPETITION
     ═══════════════════════════════════════════════════════════ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(255,107,53,0.1);color:var(--accent2);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="target"></i>
       </div>
       <span class="section-title fr">Concurrence · Da Nang + Hội An</span>
@@ -876,7 +878,7 @@
         style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem;flex-wrap:wrap;gap:8px;">
         <div>
           <div class="competitor-name">Padel Xtra Da Nang</div>
-          <div style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--muted);margin-top:3px;">
             <span class="fr">Seul concurrent direct · App : Padel Mates</span>
             <span class="en">Only direct competitor · App: Padel Mates</span>
           </div>
@@ -890,7 +892,7 @@
       <!-- Info rows -->
       <div class="row-item">
         <span class="lbl"><span class="fr">Courts</span><span class="en">Courts</span></span>
-        <span class="val" style="color:var(--text);font-family:'DM Mono',monospace;font-size:13px;">
+        <span class="val" style="color:var(--text);font-size:13px;">
           <span class="fr">2 padel + 2 pickleball (sous-utilisés)</span>
           <span class="en">2 padel + 2 pickleball (underused)</span>
         </span>
@@ -908,13 +910,13 @@
       </div>
       <div class="row-item" style="border-bottom:none;">
         <span class="lbl"><span class="fr">App de réservation</span><span class="en">Booking app</span></span>
-        <span class="val" style="color:var(--blue);font-family:'DM Mono',monospace;">Padel Mates</span>
+        <span class="val" style="color:var(--blue);">Padel Mates</span>
       </div>
 
       <!-- Weaknesses -->
       <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border);">
         <div
-          style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:10px;">
+          style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:10px;">
           <span class="fr">Points faibles identifiés</span>
           <span class="en">Identified weaknesses</span>
         </div>
@@ -932,18 +934,18 @@
     </div>
 
     <!-- Hoi An: zero competition -->
-    <div class="competitor-panel" style="border-color:rgba(200,245,90,0.2);margin-top:1rem;">
+    <div class="competitor-panel" style="border-color:rgba(127,214,143,0.25);margin-top:1rem;">
       <div
         style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem;flex-wrap:wrap;gap:8px;">
         <div>
           <div class="competitor-name" style="color:var(--accent);">Hội An</div>
-          <div style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--muted);margin-top:3px;">
             <span class="fr">Top 5 digital nomads mondial · coût de vie ~909$/mois</span>
             <span class="en">Top 5 global digital nomads · cost of living ~$909/month</span>
           </div>
         </div>
         <span class="tag"
-          style="background:rgba(77,255,145,0.12);color:var(--green);border:1px solid rgba(77,255,145,0.25);">
+          style="background:rgba(127,214,143,0.12);color:var(--green);border:1px solid rgba(127,214,143,0.28);">
           <span class="fr">Marché vierge</span>
           <span class="en">Untapped market</span>
         </span>
@@ -955,7 +957,7 @@
       </div>
       <div class="row-item">
         <span class="lbl"><span class="fr">Résidents étrangers</span><span class="en">Foreign residents</span></span>
-        <span class="val" style="color:var(--text);font-family:'DM Mono',monospace;font-size:13px;">
+        <span class="val" style="color:var(--text);font-size:13px;">
           <span class="fr">Part significative des 9 000+ combinés</span>
           <span class="en">Significant share of 9,000+ combined</span>
         </span>
@@ -963,7 +965,7 @@
       <div class="row-item" style="border-bottom:none;">
         <span class="lbl"><span class="fr">Infrastructure sportive haut de gamme</span><span class="en">Premium sports
             infrastructure</span></span>
-        <span class="val" style="color:var(--muted);font-family:'DM Mono',monospace;font-size:13px;">
+        <span class="val" style="color:var(--muted);font-size:13px;">
           <span class="fr">Inexistante</span>
           <span class="en">None</span>
         </span>
@@ -988,7 +990,7 @@
          04 · VIETNAM OPPORTUNITY
     ═══════════════════════════════════════════════════════════ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(90,180,255,0.1);color:var(--blue);">
+      <div class="section-icon" style="background:rgba(111,176,232,0.1);color:var(--blue);">
         <i data-lucide="clock"></i>
       </div>
       <span class="section-title fr">Opportunité · Vietnam</span>
@@ -1000,7 +1002,7 @@
     <!-- Adoption curve visual -->
     <div class="adoption-wrap">
       <div
-        style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:1.75rem;">
+        style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:1.75rem;">
         <span class="fr">Courbe d'adoption mondiale du padel — Où en est-on ?</span>
         <span class="en">Global padel adoption curve — Where do we stand?</span>
       </div>
@@ -1093,17 +1095,17 @@
     <div class="callout accent">
       <div class="callout-icon" style="color:var(--accent);"><i data-lucide="sparkles"></i></div>
       <div>
-        <p class="fr" style="font-size:15px;line-height:1.7;">
+        <p class="fr" style="font-size:15px;line-height:1.7;color:var(--text);">
           <strong>Da Nang + Hội An = exactement là où était la Costa del Sol il y a 15 ans.</strong><br>
           <span style="color:var(--muted);">9 000+ expats, 6,8M visiteurs, un seul concurrent qui tourne à 80% avec 2
             courts basiques à Da Nang — et <strong style="color:var(--accent);">zéro padel à Hội An</strong>. La fenêtre
             ne restera pas ouverte longtemps.</span>
         </p>
-        <p class="en" style="font-size:15px;line-height:1.7;">
+        <p class="en" style="font-size:15px;line-height:1.7;color:var(--text);">
           <strong>Da Nang + Hội An = exactly where the Costa del Sol was 15 years ago.</strong><br>
           <span style="color:var(--muted);">9,000+ expats, 6.8M visitors, one competitor running at 80% with 2 basic
             courts in Da Nang — and <strong style="color:var(--accent);">zero padel in Hội An</strong>. This window
-            won't stay open long.</span>
+          won't stay open long.</span>
         </p>
       </div>
     </div>
@@ -1112,7 +1114,7 @@
 
   <!-- ── FOOTER ──────────────────────────────────────────────── -->
   <div class="footer">
-    Chiquita Academy · Da Nang, Vietnam · Business Plan 2026<br>
+    Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2026<br>
     <span class="fr">Tous droits réservés</span>
     <span class="en">All rights reserved</span>
   </div>
@@ -1132,7 +1134,6 @@
       var isOpen = nav.classList.contains('open');
       nav.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', String(!isOpen));
-
     }
     document.addEventListener('click', function (e) {
       var nav = document.getElementById('mobile-nav');
@@ -1140,13 +1141,12 @@
       if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-
       }
     });
 
     // ── Language toggle ──────────────────────────────────────
     function setLang(lang) {
-      localStorage.setItem('chiquita-lang', lang);
+      localStorage.setItem('oasis-lang', lang);
       document.documentElement.lang = lang;
       document.documentElement.className = 'lang-' + lang;
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
@@ -1154,7 +1154,7 @@
     }
 
     (function () {
-      var lang = localStorage.getItem('chiquita-lang') || 'fr';
+      var lang = localStorage.getItem('oasis-lang') || 'fr';
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     })();

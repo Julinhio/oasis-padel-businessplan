@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiquita Academy — Facilities / Installations</title>
+  <title>Oasis Padel Academy — Facilities / Installations</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
-      var l = localStorage.getItem('chiquita-lang') || 'fr';
+      var l = localStorage.getItem('oasis-lang') || 'fr';
       document.documentElement.lang = l;
       document.documentElement.className = 'lang-' + l;
     })();
@@ -23,7 +23,7 @@
     .nav-logo-icon svg {
       width: 18px;
       height: 18px;
-      stroke: #060826;
+      stroke: currentColor;
       stroke-width: 2.5;
       display: block;
     }
@@ -46,10 +46,12 @@
 
     /* ── Section h2 ── */
     .section-h2 {
-      font-size: clamp(17px, 2.8vw, 22px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--text-strong);
       margin: -0.25rem 0 1.25rem;
     }
 
@@ -75,30 +77,32 @@
     }
 
     .spec-card.highlight {
-      border-color: var(--accent);
+      border-color: rgba(242, 201, 76, 0.4);
     }
 
     .spec-label {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: var(--muted);
       margin-bottom: 6px;
     }
 
     .spec-value {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 22px;
       font-weight: 600;
-      font-family: 'DM Mono', monospace;
+      font-variant-numeric: tabular-nums;
       line-height: 1.2;
       color: var(--accent);
     }
 
     .spec-sub {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
       color: var(--muted);
       margin-top: 4px;
-      font-family: 'DM Mono', monospace;
     }
 
     /* ── Image gallery ── */
@@ -118,20 +122,20 @@
     .gallery-item {
       position: relative;
       cursor: pointer;
-      border-radius: 12px;
+      border-radius: 4px;
       overflow: hidden;
       border: 1px solid var(--border);
-      transition: border-color 0.2s, transform 0.2s;
+      transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .gallery-item:hover {
-      border-color: rgba(242, 125, 22, 0.3);
+      border-color: rgba(242, 201, 76, 0.4);
       transform: translateY(-2px);
     }
 
     .gallery-item img {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
       display: block;
     }
@@ -141,11 +145,12 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 0.6rem 0.9rem;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+      padding: 0.65rem 0.9rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       color: var(--text);
-      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.04em;
     }
 
     /* ── Lightbox ── */
@@ -154,7 +159,7 @@
       position: fixed;
       inset: 0;
       z-index: 1000;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       align-items: center;
       justify-content: center;
       flex-direction: column;
@@ -167,16 +172,16 @@
     #lightbox-img {
       max-width: 90vw;
       max-height: 80vh;
-      border-radius: 10px;
+      border-radius: 4px;
       object-fit: contain;
       display: block;
     }
 
     #lightbox-caption {
       margin-top: 1rem;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;
-      font-family: 'DM Mono', monospace;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(240, 234, 224, 0.7);
       text-align: center;
     }
 
@@ -184,8 +189,8 @@
       position: absolute;
       top: 1.25rem;
       right: 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       color: var(--text);
       border-radius: 8px;
       width: 36px;
@@ -199,15 +204,15 @@
     }
 
     #lightbox-close:hover {
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.16);
     }
 
     .lightbox-arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       color: var(--text);
       border-radius: 10px;
       width: 44px;
@@ -221,7 +226,7 @@
     }
 
     .lightbox-arrow:hover {
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.16);
     }
 
     #lightbox-prev {
@@ -271,22 +276,22 @@
     }
 
     .space-card-icon-wrap.accent-bg {
-      background: rgba(242, 125, 22, 0.12);
+      background: rgba(242, 201, 76, 0.1);
       color: var(--accent);
     }
 
     .space-card-icon-wrap.orange-bg {
-      background: rgba(255, 107, 53, 0.12);
-      color: var(--accent2);
+      background: rgba(242, 201, 76, 0.1);
+      color: var(--accent);
     }
 
     .space-card-icon-wrap.blue-bg {
-      background: rgba(90, 180, 255, 0.12);
+      background: rgba(111, 176, 232, 0.1);
       color: var(--blue);
     }
 
     .space-card-icon-wrap.purple-bg {
-      background: rgba(167, 139, 250, 0.12);
+      background: rgba(180, 154, 232, 0.1);
       color: var(--purple);
     }
 
@@ -294,11 +299,13 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 1.2;
+      color: var(--text-strong);
     }
 
     .space-card-size {
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-size: 11px;
-      font-family: 'DM Mono', monospace;
       color: var(--muted);
       margin-top: 2px;
     }
@@ -336,9 +343,10 @@
     }
 
     .compare-table thead th {
-      font-size: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       padding: 14px 16px;
       background: var(--surface2);
@@ -350,7 +358,7 @@
     }
 
     .th-competitor {
-      color: #ff6b6b;
+      color: var(--red);
     }
 
     .th-us {
@@ -358,7 +366,7 @@
     }
 
     .col-competitor {
-      color: #ff6b6b;
+      color: var(--red);
     }
 
     .col-us {
@@ -372,13 +380,13 @@
     }
 
     .check-no {
-      color: #555;
+      color: rgba(255, 255, 255, 0.2);
     }
 
     /* ── Closing callout ── */
     .closing-callout {
-      background: rgba(242, 125, 22, 0.06);
-      border: 1px solid rgba(242, 125, 22, 0.2);
+      background: rgba(242, 201, 76, 0.05);
+      border: 1px solid rgba(242, 201, 76, 0.22);
       border-radius: 12px;
       padding: 1.25rem 1.5rem;
       margin-bottom: 2rem;
@@ -398,10 +406,10 @@
       border-radius: 8px;
       cursor: pointer;
       color: var(--text);
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       flex-shrink: 0;
       transition: opacity 0.15s;
@@ -422,7 +430,7 @@
       top: 56px;
       left: 0;
       right: 0;
-      background: rgba(245, 236, 215, 0.98);
+      background: rgba(28, 28, 28, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       z-index: 99;
@@ -450,12 +458,12 @@
 
     .mobile-nav a:hover {
       color: var(--text);
-      background: rgba(6, 8, 38, 0.04);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .mobile-nav a.active {
       color: var(--accent);
-      background: rgba(242, 125, 22, 0.06);
+      background: rgba(242, 201, 76, 0.08);
     }
 
     @media (max-width: 700px) {
@@ -478,7 +486,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-        <span class="nav-logo-text">Chiquita</span>
+        <span class="nav-logo-text">OASIS</span>
       </a>
       <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu"
         aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
@@ -512,7 +520,7 @@
   <!-- ── PAGE HEADER ─────────────────────────────────────────── -->
   <div class="page-header">
     <div class="page-header-inner">
-      <div class="page-subtitle">Chiquita - Padel Academy · Da Nang</div>
+      <div class="page-subtitle">Oasis Padel Academy · Da Nang</div>
       <h1>
         <span class="fr">Les <span>installations</span></span>
         <span class="en">The <span>Facility</span></span>
@@ -527,7 +535,7 @@
 
     <!-- ══ SECTION 1 — KEY SPECS ══ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="layout-dashboard"></i>
       </div>
       <div>
@@ -585,7 +593,7 @@
 
     <!-- ══ SECTION 2 — PLANS & VISUALS ══ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(90,180,255,0.12);color:var(--blue);">
+      <div class="section-icon" style="background:rgba(111,176,232,0.1);color:var(--blue);">
         <i data-lucide="image"></i>
       </div>
       <div>
@@ -598,7 +606,7 @@
 
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(0)">
-        <img src="assets/images/Chiquita plan-view lateral-2.jpeg" alt="Vue latérale — espaces de convivialité"
+        <img src="assets/images/oasis-plan-view-lateral-2.jpeg" alt="Vue latérale — espaces de convivialité"
           loading="lazy">
         <div class="gallery-caption">
           <span class="fr">Vue latérale — espaces de convivialité</span>
@@ -606,21 +614,21 @@
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox(1)">
-        <img src="assets/images/Chiquita plan-view lateral.jpeg" alt="Vue latérale — 4 courts couverts" loading="lazy">
+        <img src="assets/images/oasis-plan-view-lateral.jpeg" alt="Vue latérale — 4 courts couverts" loading="lazy">
         <div class="gallery-caption">
           <span class="fr">Vue latérale — 4 courts couverts</span>
           <span class="en">Lateral view — 4 indoor courts</span>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox(2)">
-        <img src="assets/images/Chiquita plan-view up.jpeg" alt="Vue de dessus — agencement général" loading="lazy">
+        <img src="assets/images/oasis-plan-view-up.jpeg" alt="Vue de dessus — agencement général" loading="lazy">
         <div class="gallery-caption">
           <span class="fr">Vue de dessus — agencement général</span>
           <span class="en">Top view — general layout</span>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox(3)">
-        <img src="assets/images/Chiquita plan-view sky.jpeg" alt="Vue aérienne — concept global" loading="lazy">
+        <img src="assets/images/oasis-plan-view-sky.jpeg" alt="Vue aérienne — concept global" loading="lazy">
         <div class="gallery-caption">
           <span class="fr">Vue aérienne — concept global</span>
           <span class="en">Sky view — full concept</span>
@@ -630,7 +638,7 @@
 
     <!-- ══ SECTION 3 — THE 4 SPACES ══ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(167,139,250,0.12);color:var(--purple);">
+      <div class="section-icon" style="background:rgba(180,154,232,0.12);color:var(--purple);">
         <i data-lucide="grid-2x2"></i>
       </div>
       <div>
@@ -703,14 +711,14 @@
           </div>
         </div>
         <p class="space-card-desc fr">Accueil premium, location de raquettes, vente d'équipement et de merchandising
-          Chiquita Academy.</p>
-        <p class="space-card-desc en">Premium reception, racket rental, equipment and Chiquita Academy merchandise.</p>
+          Oasis Padel Academy.</p>
+        <p class="space-card-desc en">Premium reception, racket rental, equipment and Oasis Padel Academy merchandise.</p>
       </div>
     </div>
 
     <!-- ══ SECTION 4 — PREMIUM POSITIONING ══ -->
     <div class="section-header">
-      <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="trophy"></i>
       </div>
       <div>
@@ -727,7 +735,7 @@
           <tr>
             <th class="col-feature"></th>
             <th class="th-competitor">Padel Xtra</th>
-            <th class="th-us">Chiquita Academy</th>
+            <th class="th-us">Oasis Padel Academy</th>
           </tr>
         </thead>
         <tbody>
@@ -780,13 +788,13 @@
       <p class="fr">
         <strong style="color:var(--accent);">Padel Xtra tourne à +80% d'occupation avec 2 courts et zéro
           wellness.</strong>
-        <span style="color:var(--muted);"> Chiquita Academy arrive avec le double de courts et une expérience premium
+        <span style="color:var(--muted);"> Oasis Padel Academy arrive avec le double de courts et une expérience premium
           complète.</span>
       </p>
       <p class="en">
         <strong style="color:var(--accent);">Padel Xtra runs at +80% occupancy with 2 courts and zero
           wellness.</strong>
-        <span style="color:var(--muted);"> Chiquita - Padel - Padel Academy arrives with twice the courts and a complete
+        <span style="color:var(--muted);"> Oasis Padel Academy arrives with twice the courts and a complete
           premium
           experience.</span>
       </p>
@@ -805,7 +813,7 @@
 
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <div class="footer">
-    Chiquita Academy · Da Nang, Vietnam · Business Plan 2026<br>
+    Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2026<br>
     <span class="fr">Tous droits réservés</span>
     <span class="en">All rights reserved</span>
   </div>
@@ -825,7 +833,6 @@
       var isOpen = nav.classList.contains('open');
       nav.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', String(!isOpen));
-
     }
     document.addEventListener('click', function (e) {
       var nav = document.getElementById('mobile-nav');
@@ -833,25 +840,23 @@
       if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-
       }
     });
 
     // ── Language toggle ──────────────────────────────────────
     function setLang(lang) {
-      localStorage.setItem('chiquita-lang', lang);
+      localStorage.setItem('oasis-lang', lang);
       document.documentElement.lang = lang;
       document.documentElement.className = 'lang-' + lang;
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      // Update lightbox caption if open
       if (document.getElementById('lightbox').classList.contains('open')) {
         renderLightbox();
       }
     }
 
     (function () {
-      var lang = localStorage.getItem('chiquita-lang') || 'fr';
+      var lang = localStorage.getItem('oasis-lang') || 'fr';
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     })();
@@ -859,22 +864,22 @@
     // ── Lightbox ─────────────────────────────────────────────
     var lightboxImages = [
       {
-        src: 'assets/images/Chiquita plan-view lateral-2.jpeg',
+        src: 'assets/images/oasis-plan-view-lateral-2.jpeg',
         fr: 'Vue latérale — espaces de convivialité',
         en: 'Lateral view — social spaces'
       },
       {
-        src: 'assets/images/Chiquita plan-view lateral.jpeg',
+        src: 'assets/images/oasis-plan-view-lateral.jpeg',
         fr: 'Vue latérale — 4 courts couverts',
         en: 'Lateral view — 4 indoor courts'
       },
       {
-        src: 'assets/images/Chiquita plan-view up.jpeg',
+        src: 'assets/images/oasis-plan-view-up.jpeg',
         fr: 'Vue de dessus — agencement général',
         en: 'Top view — general layout'
       },
       {
-        src: 'assets/images/Chiquita plan-view sky.jpeg',
+        src: 'assets/images/oasis-plan-view-sky.jpeg',
         fr: 'Vue aérienne — concept global',
         en: 'Sky view — full concept'
       }
@@ -901,7 +906,7 @@
 
     function renderLightbox() {
       var item = lightboxImages[currentIndex];
-      var lang = localStorage.getItem('chiquita-lang') || 'fr';
+      var lang = localStorage.getItem('oasis-lang') || 'fr';
       document.getElementById('lightbox-img').src = item.src;
       document.getElementById('lightbox-img').alt = item[lang];
       document.getElementById('lightbox-caption').textContent = item[lang];

@@ -5,61 +5,73 @@
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiquita Academy — Investment</title>
+  <title>Oasis Padel Academy — Investment</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
-      var l = localStorage.getItem('chiquita-lang') || 'fr';
+      var l = localStorage.getItem('oasis-lang') || 'fr';
       document.documentElement.lang = l;
       document.documentElement.className = 'lang-' + l;
     })();
   </script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
-    .nav-logo-icon svg { width: 18px; height: 18px; stroke: #060826; stroke-width: 2.5; display: block; }
+    .nav-logo-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      display: block;
+    }
+
     /* ── MENU button — mobile only ── */
-        .hamburger {
-            display: none;
-            align-items: center;
-            gap: 6px;
-            padding: 0 13px;
-            height: 34px;
-            background: transparent;
-            border: 1px solid var(--border2);
-            border-radius: 8px;
-            cursor: pointer;
-            color: var(--text);
-            font-family: 'Syne', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            flex-shrink: 0;
-            transition: opacity 0.15s;
-        }
-            .hamburger:hover {
-            opacity: 0.85;
-        }
-            .hamburger .menu-bars {
-            font-size: 16px;
-            line-height: 1;
-        }
+    .hamburger {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 0 13px;
+      height: 34px;
+      background: transparent;
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      transition: opacity 0.15s;
+    }
+
+    .hamburger:hover {
+      opacity: 0.85;
+    }
+
+    .hamburger .menu-bars {
+      font-size: 16px;
+      line-height: 1;
+    }
+
     .mobile-nav {
       display: none;
       position: absolute;
       top: 56px;
       left: 0;
       right: 0;
-      background: rgba(245, 236, 215, 0.98);
+      background: rgba(28, 28, 28, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       z-index: 99;
       padding: 0.5rem 0;
     }
+
     .mobile-nav.open { display: block; }
+
     .mobile-nav a {
       display: block;
       padding: 13px 1.5rem;
@@ -70,12 +82,14 @@
       border-bottom: 1px solid var(--border);
       transition: color 0.15s, background 0.15s;
     }
+
     .mobile-nav a:last-child { border-bottom: none; }
-    .mobile-nav a:hover { color: var(--text); background: rgba(6, 8, 38, 0.04); }
-    .mobile-nav a.active { color: var(--accent); background: rgba(200, 94, 8, 0.06); }
+    .mobile-nav a:hover { color: var(--text); background: rgba(255, 255, 255, 0.04); }
+    .mobile-nav a.active { color: var(--accent); background: rgba(242, 201, 76, 0.08); }
+
     @media (max-width: 700px) {
       .hamburger { display: flex; }
-      .nav-links  { display: none !important; }
+      .nav-links { display: none !important; }
     }
   </style>
 </head>
@@ -88,7 +102,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-        <span class="nav-logo-text">Chiquita</span>
+        <span class="nav-logo-text">OASIS</span>
       </a>
       <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
       <div class="nav-links">
@@ -133,7 +147,7 @@
 
   <!-- ── FOOTER ──────────────────────────────────────────────── -->
   <div class="footer">
-    Chiquita Academy · Da Nang, Vietnam · Business Plan 2025<br>
+    Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2025<br>
     <span class="fr">Tous droits réservés</span>
     <span class="en">All rights reserved</span>
   </div>
@@ -152,7 +166,6 @@
       var isOpen = nav.classList.contains('open');
       nav.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', String(!isOpen));
-      
     }
     document.addEventListener('click', function(e) {
       var nav = document.getElementById('mobile-nav');
@@ -160,12 +173,11 @@
       if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-        
       }
     });
 
     function setLang(lang) {
-      localStorage.setItem('chiquita-lang', lang);
+      localStorage.setItem('oasis-lang', lang);
       document.documentElement.lang = lang;
       document.documentElement.className = 'lang-' + lang;
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
@@ -173,7 +185,7 @@
     }
 
     (function () {
-      var lang = localStorage.getItem('chiquita-lang') || 'fr';
+      var lang = localStorage.getItem('oasis-lang') || 'fr';
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     })();

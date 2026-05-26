@@ -1,7 +1,7 @@
 {
-  "name": "chiquita-academy",
+  "name": "oasis-padel-businessplan",
   "version": "1.0.0",
-  "description": "Chiquita Academy — Da Nang padel club business plan",
+  "description": "Oasis Padel Academy — Da Nang padel club business plan",
   "scripts": {
     "dev": "npx live-server --port=3000"
   }

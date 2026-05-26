@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiquita Academy — Legal / Structure Légale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Padel Academy — Legal / Structure Légale</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script>
         (function () {
-            var l = localStorage.getItem('chiquita-lang') || 'fr';
+            var l = localStorage.getItem('oasis-lang') || 'fr';
             document.documentElement.lang = l;
             document.documentElement.className = 'lang-' + l;
         })();
@@ -23,7 +23,7 @@
         .nav-logo-icon svg {
             width: 18px;
             height: 18px;
-            stroke: #060826;
+            stroke: currentColor;
             stroke-width: 2.5;
             display: block;
         }
@@ -46,10 +46,12 @@
 
         /* ── Section h2 ── */
         .section-h2 {
-            font-size: clamp(17px, 2.8vw, 22px);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+            color: var(--text-strong);
             margin: -0.25rem 0 1.25rem;
         }
 
@@ -80,7 +82,7 @@
         }
 
         .corp-box.investors {
-            background: rgba(6, 8, 38, 0.04);
+            background: rgba(255, 255, 255, 0.03);
             border-color: rgba(255, 255, 255, 0.1);
             font-size: 12px;
             font-weight: 500;
@@ -88,31 +90,31 @@
         }
 
         .corp-box.singapore {
-            background: rgba(242, 125, 22, 0.08);
-            border-color: rgba(242, 125, 22, 0.35);
+            background: rgba(242, 201, 76, 0.08);
+            border-color: rgba(242, 201, 76, 0.35);
             color: var(--accent);
             font-size: 14px;
         }
 
         .corp-box.singapore .corp-sub {
-            color: rgba(242, 125, 22, 0.6);
+            color: rgba(242, 201, 76, 0.65);
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             font-weight: 400;
-            font-family: 'DM Mono', monospace;
             margin-top: 2px;
         }
 
         .corp-box.vietnam {
-            background: rgba(90, 180, 255, 0.06);
-            border-color: rgba(90, 180, 255, 0.25);
+            background: rgba(111, 176, 232, 0.06);
+            border-color: rgba(111, 176, 232, 0.28);
             color: var(--blue);
         }
 
         .corp-box.vietnam .corp-sub {
-            color: rgba(90, 180, 255, 0.6);
+            color: rgba(111, 176, 232, 0.65);
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             font-weight: 400;
-            font-family: 'DM Mono', monospace;
             margin-top: 2px;
         }
 
@@ -156,11 +158,11 @@
         }
 
         .entity-card.sg {
-            border-color: rgba(242, 125, 22, 0.25);
+            border-color: rgba(242, 201, 76, 0.28);
         }
 
         .entity-card.vn {
-            border-color: rgba(90, 180, 255, 0.2);
+            border-color: rgba(111, 176, 232, 0.25);
         }
 
         .entity-title {
@@ -191,7 +193,6 @@
 
         .entity-rows .row-item .val {
             font-size: 12px;
-            font-family: 'DM Mono', monospace;
         }
 
         /* ── VSIC check list ── */
@@ -259,7 +260,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
+            font-variant-numeric: tabular-nums;
             font-size: 13px;
             font-weight: 700;
             color: var(--muted);
@@ -267,14 +269,14 @@
         }
 
         .step-num-circle.active {
-            background: rgba(242, 125, 22, 0.1);
-            border-color: rgba(242, 125, 22, 0.5);
+            background: rgba(242, 201, 76, 0.1);
+            border-color: rgba(242, 201, 76, 0.5);
             color: var(--accent);
         }
 
         .step-num-circle.final {
-            background: rgba(77, 255, 145, 0.1);
-            border-color: rgba(77, 255, 145, 0.5);
+            background: rgba(127, 214, 143, 0.1);
+            border-color: rgba(127, 214, 143, 0.5);
             color: var(--green);
         }
 
@@ -296,33 +298,34 @@
         .step-title-text {
             font-size: 15px;
             font-weight: 700;
+            color: var(--text-strong);
         }
 
         .step-dur {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 10px;
             color: var(--blue);
-            background: rgba(90, 180, 255, 0.1);
+            background: rgba(111, 176, 232, 0.1);
             padding: 2px 8px;
             border-radius: 5px;
         }
 
         .step-tag {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 10px;
             font-weight: 700;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.08em;
             padding: 2px 8px;
             border-radius: 5px;
         }
 
         .step-tag.orange {
-            background: rgba(255, 107, 53, 0.12);
-            color: var(--accent2);
+            background: rgba(242, 201, 76, 0.12);
+            color: var(--accent);
         }
 
         .step-tag.green {
-            background: rgba(77, 255, 145, 0.1);
+            background: rgba(127, 214, 143, 0.1);
             color: var(--green);
         }
 
@@ -382,13 +385,13 @@
         }
 
         .coach-num {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             font-weight: 700;
             color: var(--accent);
             margin-bottom: 5px;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.1em;
         }
 
         /* ── Budget table ── */
@@ -426,9 +429,11 @@
 
         .budget-table .b-amt {
             text-align: right;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
+            font-variant-numeric: tabular-nums;
             font-weight: 500;
             white-space: nowrap;
+            color: var(--text);
         }
 
         .budget-table tr.b-total td {
@@ -438,10 +443,11 @@
         }
 
         .budget-panel-title {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.14em;
             padding: 10px 12px 6px;
             color: var(--muted);
         }
@@ -474,10 +480,10 @@
 
         .gantt-table thead th {
             background: var(--surface2);
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.1em;
             text-align: center;
             color: var(--muted);
         }
@@ -508,19 +514,19 @@
         }
 
         .gantt-bar.blue {
-            background: rgba(90, 180, 255, 0.7);
+            background: rgba(111, 176, 232, 0.7);
         }
 
         .gantt-bar.green {
-            background: rgba(77, 255, 145, 0.7);
+            background: rgba(127, 214, 143, 0.7);
         }
 
         .gantt-bar.orange {
-            background: rgba(255, 107, 53, 0.7);
+            background: rgba(242, 201, 76, 0.7);
         }
 
         .gantt-bar.purple {
-            background: rgba(167, 139, 250, 0.7);
+            background: rgba(180, 154, 232, 0.7);
         }
 
         .gantt-bar.muted {
@@ -528,9 +534,9 @@
         }
 
         .gantt-caption {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 12px;
             color: var(--muted);
-            font-family: 'DM Mono', monospace;
             padding: 0.6rem 0 1rem;
             text-align: center;
         }
@@ -553,7 +559,8 @@
         }
 
         .risk-n {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
+            font-variant-numeric: tabular-nums;
             font-size: 13px;
             font-weight: 700;
             width: 22px;
@@ -574,6 +581,7 @@
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
+            color: var(--text-strong);
         }
 
         .risk-desc-card {
@@ -583,22 +591,22 @@
         }
 
         .risk-tag {
-            font-family: 'DM Mono', monospace;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 10px;
             font-weight: 700;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.08em;
             padding: 2px 8px;
             border-radius: 5px;
         }
 
         .risk-tag.orange {
-            background: rgba(255, 107, 53, 0.12);
-            color: var(--accent2);
+            background: rgba(242, 201, 76, 0.12);
+            color: var(--accent);
         }
 
         .risk-tag.yellow {
-            background: rgba(251, 191, 36, 0.1);
-            color: var(--yellow);
+            background: rgba(242, 201, 76, 0.1);
+            color: var(--accent);
         }
 
         /* ── Checklist ── */
@@ -618,7 +626,7 @@
             border: 1px solid var(--border);
             border-radius: 10px;
             cursor: pointer;
-            transition: border-color 0.15s, background 0.15s;
+            transition: border-color 0.2s, background 0.2s;
             user-select: none;
         }
 
@@ -627,8 +635,8 @@
         }
 
         .check-item.checked {
-            background: rgba(242, 125, 22, 0.04);
-            border-color: rgba(242, 125, 22, 0.2);
+            background: rgba(242, 201, 76, 0.05);
+            border-color: rgba(242, 201, 76, 0.25);
         }
 
         .check-box {
@@ -650,7 +658,7 @@
         }
 
         .check-box-tick {
-            color: #060826;
+            color: var(--bg);
             font-size: 11px;
             font-weight: 700;
             display: none;
@@ -669,7 +677,7 @@
         .check-item.checked .check-text {
             color: var(--muted);
             text-decoration: line-through;
-            text-decoration-color: rgba(242, 125, 22, 0.4);
+            text-decoration-color: rgba(242, 201, 76, 0.45);
         }
 
         /* ── MENU button — mobile only ── */
@@ -684,20 +692,20 @@
             border-radius: 8px;
             cursor: pointer;
             color: var(--text);
-            font-family: 'Syne', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             flex-shrink: 0;
             transition: opacity 0.15s;
         }
 
-                .hamburger:hover {
+        .hamburger:hover {
             opacity: 0.85;
         }
 
-                .hamburger .menu-bars {
+        .hamburger .menu-bars {
             font-size: 16px;
             line-height: 1;
         }
@@ -708,7 +716,7 @@
             top: 56px;
             left: 0;
             right: 0;
-            background: rgba(245, 236, 215, 0.98);
+            background: rgba(28, 28, 28, 0.96);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             z-index: 99;
@@ -736,12 +744,12 @@
 
         .mobile-nav a:hover {
             color: var(--text);
-            background: rgba(6, 8, 38, 0.04);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .mobile-nav a.active {
             color: var(--accent);
-            background: rgba(242, 125, 22, 0.06);
+            background: rgba(242, 201, 76, 0.08);
         }
 
         @media (max-width: 700px) {
@@ -764,7 +772,7 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-                <span class="nav-logo-text">Chiquita</span>
+                <span class="nav-logo-text">OASIS</span>
             </a>
             <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
             <div class="nav-links">
@@ -797,7 +805,7 @@
     <!-- ── PAGE HEADER ─────────────────────────────────────────── -->
     <div class="page-header">
         <div class="page-header-inner">
-            <div class="page-subtitle">Chiquita Academy · Da Nang</div>
+            <div class="page-subtitle">Oasis Padel Academy · Da Nang</div>
             <h1>
                 <span class="fr">Structure <span>légale</span></span>
                 <span class="en">Legal <span>structure</span></span>
@@ -812,7 +820,7 @@
 
         <!-- ══ SECTION 1 — CORPORATE STRUCTURE ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+            <div class="section-icon" style="background:rgba(242,201,76,0.12);color:var(--accent);">
                 <i data-lucide="git-branch"></i>
             </div>
             <div>
@@ -841,7 +849,7 @@
                         <span class="fr">Société à Responsabilité Limitée (SARL) — LLC Vietnam</span>
                         <span class="en">Vietnamese LLC (FDI)</span>
                     </div>
-                    <div class="corp-sub">Chiquita - Padel Academy</div>
+                    <div class="corp-sub">Oasis - Padel Academy</div>
                 </div>
             </div>
         </div>
@@ -923,7 +931,7 @@
 
         <!-- ══ SECTION 2 — VSIC 9311 ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(77,255,145,0.1);color:var(--green);">
+            <div class="section-icon" style="background:rgba(127,214,143,0.1);color:var(--green);">
                 <i data-lucide="badge-check"></i>
             </div>
             <div>
@@ -935,12 +943,12 @@
         <h2 class="section-h2 en">Business Activity Code: VSIC 9311</h2>
 
         <div class="callout accent" style="margin-bottom:1rem;">
-            <div class="callout-icon"><i data-lucide="check-circle"></i></div>
+            <div class="callout-icon" style="color:var(--accent);"><i data-lucide="check-circle"></i></div>
             <div>
-                <p class="fr" style="font-size:13px;line-height:1.65;"><strong>VSIC 9311</strong> — <em>Hoạt động của
+                <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>VSIC 9311</strong> — <em>Hoạt động của
                         các cơ sở thể thao</em> (Exploitation d'installations sportives) — autorise <strong>100% de
                         capital étranger</strong> sans joint-venture obligatoire.</p>
-                <p class="en" style="font-size:13px;line-height:1.65;"><strong>VSIC 9311</strong> — <em>Hoạt động của
+                <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>VSIC 9311</strong> — <em>Hoạt động của
                         các cơ sở thể thao</em> (Operation of sports facilities) — allows <strong>100% foreign
                         ownership</strong> with no mandatory joint venture.</p>
                 <ul class="check-list" style="margin-top:0.75rem;">
@@ -965,12 +973,12 @@
         </div>
 
         <div class="callout warn" style="margin-bottom:2rem;">
-            <div class="callout-icon"><i data-lucide="alert-triangle"></i></div>
+            <div class="callout-icon" style="color:var(--accent);"><i data-lucide="alert-triangle"></i></div>
             <div>
-                <p class="fr" style="font-size:13px;line-height:1.65;"><strong>Mise à jour VSIC prévue novembre
+                <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>Mise à jour VSIC prévue novembre
                         2025</strong> (Decision 36/2025/QD-TTg). Le code 9311 est maintenu avec ajustements mineurs. À
                     reconfirmer si ouverture après novembre 2025.</p>
-                <p class="en" style="font-size:13px;line-height:1.65;"><strong>VSIC update planned November
+                <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>VSIC update planned November
                         2025</strong> (Decision 36/2025/QD-TTg). Code 9311 maintained with minor adjustments. To confirm
                     if opening after November 2025.</p>
             </div>
@@ -978,7 +986,7 @@
 
         <!-- ══ SECTION 3 — THE 6 STEPS ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(90,180,255,0.12);color:var(--blue);">
+            <div class="section-icon" style="background:rgba(111,176,232,0.12);color:var(--blue);">
                 <i data-lucide="list-ordered"></i>
             </div>
             <div>
@@ -1158,7 +1166,7 @@
 
         <!-- ══ SECTION 4 — COACH REQUIREMENTS ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(255,107,53,0.12);color:var(--accent2);">
+            <div class="section-icon" style="background:rgba(242,201,76,0.12);color:var(--accent);">
                 <i data-lucide="user-check"></i>
             </div>
             <div>
@@ -1170,12 +1178,12 @@
         <h2 class="section-h2 en">Coach Requirements</h2>
 
         <div class="callout warn" style="margin-bottom:1rem;">
-            <div class="callout-icon"><i data-lucide="alert-triangle"></i></div>
+            <div class="callout-icon" style="color:var(--accent);"><i data-lucide="alert-triangle"></i></div>
             <div>
-                <p class="fr" style="font-size:13px;line-height:1.65;">La loi vietnamienne exige une qualification
+                <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);">La loi vietnamienne exige une qualification
                     reconnue. Le padel n'a pas encore de cadre dédié au Vietnam — <strong>assimilé aux sports de
                         raquette.</strong></p>
-                <p class="en" style="font-size:13px;line-height:1.65;">Vietnamese law requires recognized
+                <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);">Vietnamese law requires recognized
                     qualifications. Padel has no dedicated framework in Vietnam yet — <strong>treated as a racket
                         sport.</strong></p>
             </div>
@@ -1203,12 +1211,12 @@
         </div>
 
         <div class="callout accent" style="margin-bottom:2rem;">
-            <div class="callout-icon"><i data-lucide="lightbulb"></i></div>
+            <div class="callout-icon" style="color:var(--accent);"><i data-lucide="lightbulb"></i></div>
             <div>
-                <p class="fr" style="font-size:13px;line-height:1.65;"><strong>Solution pratique :</strong> un coach
+                <p class="fr" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>Solution pratique :</strong> un coach
                     vietnamien certifié sport de raquette (volet légal) + un coach expat avec certification
                     internationale (niveau technique).</p>
-                <p class="en" style="font-size:13px;line-height:1.65;"><strong>Practical solution:</strong> one
+                <p class="en" style="font-size:13px;line-height:1.65;color:var(--text);"><strong>Practical solution:</strong> one
                     Vietnamese coach certified in racket sports (legal cover) + one expat coach with international
                     certification (technical level).</p>
             </div>
@@ -1216,7 +1224,7 @@
 
         <!-- ══ SECTION 5 — LEGAL BUDGET ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(251,191,36,0.1);color:var(--yellow);">
+            <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
                 <i data-lucide="wallet"></i>
             </div>
             <div>
@@ -1296,7 +1304,7 @@
 
         <!-- ══ SECTION 6 — GLOBAL TIMELINE ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(167,139,250,0.12);color:var(--purple);">
+            <div class="section-icon" style="background:rgba(180,154,232,0.12);color:var(--purple);">
                 <i data-lucide="calendar-range"></i>
             </div>
             <div>
@@ -1401,7 +1409,7 @@
 
         <!-- ══ SECTION 7 — KEY RISKS ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(255,107,53,0.12);color:var(--accent2);">
+            <div class="section-icon" style="background:rgba(242,201,76,0.12);color:var(--accent);">
                 <i data-lucide="shield-alert"></i>
             </div>
             <div>
@@ -1504,7 +1512,7 @@
 
         <!-- ══ SECTION 8 — ACTION CHECKLIST ══ -->
         <div class="section-header section-sep">
-            <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+            <div class="section-icon" style="background:rgba(242,201,76,0.12);color:var(--accent);">
                 <i data-lucide="check-square"></i>
             </div>
             <div>
@@ -1564,7 +1572,7 @@
 
     <!-- ── FOOTER ─────────────────────────────────────────────── -->
     <div class="footer">
-        Chiquita Academy · Da Nang, Vietnam · Business Plan 2026<br>
+        Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2026<br>
         <span class="fr">Tous droits réservés</span>
         <span class="en">All rights reserved</span>
     </div>
@@ -1584,7 +1592,6 @@
             var isOpen = nav.classList.contains('open');
             nav.classList.toggle('open', !isOpen);
             btn.setAttribute('aria-expanded', String(!isOpen));
-            
         }
         document.addEventListener('click', function (e) {
             var nav = document.getElementById('mobile-nav');
@@ -1592,13 +1599,12 @@
             if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
                 nav.classList.remove('open');
                 btn.setAttribute('aria-expanded', 'false');
-                
             }
         });
 
         // ── Language toggle ──────────────────────────────────────
         function setLang(lang) {
-            localStorage.setItem('chiquita-lang', lang);
+            localStorage.setItem('oasis-lang', lang);
             document.documentElement.lang = lang;
             document.documentElement.className = 'lang-' + lang;
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
@@ -1606,13 +1612,13 @@
         }
 
         (function () {
-            var lang = localStorage.getItem('chiquita-lang') || 'fr';
+            var lang = localStorage.getItem('oasis-lang') || 'fr';
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
         })();
 
         // ── Checklist with localStorage persistence ───────────────
-        var STORAGE_KEY = 'chiquita-legal-checks';
+        var STORAGE_KEY = 'oasis-legal-checks';
 
         function loadChecks() {
             try {
@@ -1649,9 +1655,6 @@
                 }
             });
         })();
-
-        // ── Fix Gantt bilingual labels (cells with .en display:none) ──
-        // They're in the same TD so we use the lang class approach — already handled by CSS .lang-fr .en { display:none }
 
         // ── Lucide icons ─────────────────────────────────────────
         lucide.createIcons();

@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiquita Academy — Financial / Modèle Financier</title>
+  <title>Oasis Padel Academy — Financial / Modèle Financier</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
-      var l = localStorage.getItem('chiquita-lang') || 'fr';
+      var l = localStorage.getItem('oasis-lang') || 'fr';
       document.documentElement.lang = l;
       document.documentElement.className = 'lang-' + l;
     })();
@@ -23,7 +23,7 @@
     .nav-logo-icon svg {
       width: 18px;
       height: 18px;
-      stroke: #060826;
+      stroke: currentColor;
       stroke-width: 2.5;
       display: block;
     }
@@ -49,8 +49,9 @@
       position: sticky;
       top: 56px;
       z-index: 50;
-      background: rgba(245, 236, 215, 0.97);
-      backdrop-filter: blur(12px);
+      background: rgba(28, 28, 28, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -73,10 +74,11 @@
     }
 
     .ctrl-label {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.14em;
       color: var(--muted);
     }
 
@@ -103,11 +105,12 @@
       border-radius: 50%;
       background: var(--accent);
       cursor: pointer;
-      box-shadow: 0 0 0 4px rgba(242, 125, 22, 0.15);
+      box-shadow: 0 0 0 4px rgba(242, 201, 76, 0.18);
     }
 
     .slider-val {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-size: 15px;
       font-weight: 600;
       color: var(--accent);
@@ -116,10 +119,10 @@
     }
 
     .ctrl-hint {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       color: var(--muted);
-      font-family: 'DM Mono', monospace;
-      opacity: 0.65;
+      opacity: 0.7;
     }
 
     .toggle-group {
@@ -133,26 +136,33 @@
       border: 1px solid var(--border2);
       background: transparent;
       color: var(--muted);
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
       white-space: nowrap;
+    }
+
+    .toggle-btn:hover {
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.28);
     }
 
     .toggle-btn.active {
       background: var(--accent);
-      color: #060826;
+      color: var(--bg);
       border-color: var(--accent);
       font-weight: 600;
     }
 
     /* ── Section h2 ── */
     .section-h2 {
-      font-size: clamp(17px, 2.8vw, 22px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--text-strong);
       margin: -0.25rem 0 1.25rem;
     }
 
@@ -181,10 +191,12 @@
 
     .lbl-main {
       font-size: 13px;
+      color: var(--text);
     }
 
     .lbl-sub {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-size: 10px;
       color: var(--muted);
       margin-top: 2px;
@@ -192,10 +204,12 @@
 
     .amt {
       text-align: right;
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-weight: 600;
       white-space: nowrap;
       vertical-align: middle;
+      color: var(--text-strong);
     }
 
     .amt.acc {
@@ -241,18 +255,21 @@
     }
 
     .res-label {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: var(--muted);
       margin-bottom: 6px;
     }
 
     .res-value {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 20px;
       font-weight: 700;
-      font-family: 'DM Mono', monospace;
+      font-variant-numeric: tabular-nums;
       line-height: 1.2;
+      color: var(--text-strong);
     }
 
     .res-value.acc {
@@ -281,24 +298,24 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      transition: background 0.25s, border-color 0.25s, color 0.25s;
     }
 
     .verdict-box.good {
-      background: rgba(77, 255, 145, 0.08);
-      border: 1px solid rgba(77, 255, 145, 0.25);
+      background: rgba(127, 214, 143, 0.07);
+      border: 1px solid rgba(127, 214, 143, 0.28);
       color: var(--green);
     }
 
     .verdict-box.warn {
-      background: rgba(255, 200, 50, 0.08);
-      border: 1px solid rgba(255, 200, 50, 0.25);
-      color: #ffc832;
+      background: rgba(242, 201, 76, 0.07);
+      border: 1px solid rgba(242, 201, 76, 0.28);
+      color: var(--accent);
     }
 
     .verdict-box.bad {
-      background: rgba(255, 68, 68, 0.08);
-      border: 1px solid rgba(255, 68, 68, 0.25);
+      background: rgba(226, 100, 100, 0.07);
+      border: 1px solid rgba(226, 100, 100, 0.28);
       color: var(--red);
     }
 
@@ -326,7 +343,7 @@
 
     .invest-track {
       flex: 1;
-      background: rgba(6, 8, 38, 0.04);
+      background: rgba(255, 255, 255, 0.04);
       border-radius: 4px;
       height: 22px;
       overflow: hidden;
@@ -338,10 +355,11 @@
       display: flex;
       align-items: center;
       padding-left: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-size: 11px;
-      font-family: 'DM Mono', monospace;
       font-weight: 600;
-      color: #060826;
+      color: var(--bg);
       white-space: nowrap;
     }
 
@@ -355,14 +373,17 @@
     }
 
     .invest-total-row .itlbl {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
+      color: var(--text-strong);
     }
 
     .invest-total-row .itval {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Space Grotesk', sans-serif;
+      font-variant-numeric: tabular-nums;
       font-size: 16px;
       font-weight: 700;
       color: var(--accent);
@@ -370,8 +391,8 @@
 
     /* ── ROI callout ── */
     .roi-callout {
-      background: rgba(242, 125, 22, 0.05);
-      border: 1px solid rgba(242, 125, 22, 0.18);
+      background: rgba(242, 201, 76, 0.05);
+      border: 1px solid rgba(242, 201, 76, 0.22);
       border-radius: 12px;
       padding: 1rem 1.25rem;
       margin-top: 1rem;
@@ -397,10 +418,10 @@
       border-radius: 8px;
       cursor: pointer;
       color: var(--text);
-      font-family: 'Syne', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       flex-shrink: 0;
       transition: opacity 0.15s;
@@ -421,7 +442,7 @@
       top: 56px;
       left: 0;
       right: 0;
-      background: rgba(245, 236, 215, 0.98);
+      background: rgba(28, 28, 28, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       z-index: 99;
@@ -449,12 +470,12 @@
 
     .mobile-nav a:hover {
       color: var(--text);
-      background: rgba(6, 8, 38, 0.04);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .mobile-nav a.active {
       color: var(--accent);
-      background: rgba(242, 125, 22, 0.06);
+      background: rgba(242, 201, 76, 0.08);
     }
 
     @media (max-width: 700px) {
@@ -477,7 +498,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon"><i data-lucide="zap"></i></span>
-        <span class="nav-logo-text">Chiquita</span>
+        <span class="nav-logo-text">OASIS</span>
       </a>
       <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu"
         aria-expanded="false"><span class="menu-bars">&#9776;</span> MENU</button>
@@ -554,7 +575,7 @@
   <!-- ── PAGE HEADER ─────────────────────────────────────────── -->
   <div class="page-header">
     <div class="page-header-inner">
-      <div class="page-subtitle">Chiquita Academy · Da Nang</div>
+      <div class="page-subtitle">Oasis Padel Academy · Da Nang</div>
       <h1>
         <span class="fr">Modèle <span>financier</span></span>
         <span class="en">Financial <span>model</span></span>
@@ -569,7 +590,7 @@
 
     <!-- ══ SECTION 1 — REVENUE ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(200,245,90,0.12);color:var(--accent);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="trending-up"></i>
       </div>
       <div>
@@ -613,7 +634,7 @@
             <td class="amt" id="rev-wellness">24,000$</td>
           </tr>
           <tr class="sep-top">
-            <td style="font-weight:700;">
+            <td style="font-weight:700;color:var(--text-strong);">
               <span class="fr">CA annuel total</span>
               <span class="en">Total annual revenue</span>
             </td>
@@ -625,7 +646,7 @@
 
     <!-- ══ SECTION 2 — MONTHLY FIXED COSTS ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(255,68,68,0.12);color:var(--red);">
+      <div class="section-icon" style="background:rgba(226,100,100,0.12);color:var(--red);">
         <i data-lucide="receipt"></i>
       </div>
       <div>
@@ -701,7 +722,7 @@
 
     <!-- ══ SECTION 3 — RESULT ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(77,255,145,0.1);color:var(--green);">
+      <div class="section-icon" style="background:rgba(127,214,143,0.1);color:var(--green);">
         <i data-lucide="bar-chart-2"></i>
       </div>
       <div>
@@ -746,7 +767,7 @@
 
     <!-- ══ SECTION 5 — INITIAL INVESTMENT ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(251,191,36,0.1);color:var(--yellow);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="landmark"></i>
       </div>
       <div>
@@ -782,7 +803,7 @@
           <span class="en">Reception + pro shop</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:14%;background:rgba(200,245,90,0.7);">25,000$</div>
+          <div class="invest-fill" style="width:14%;background:rgba(242,201,76,0.7);">25,000$</div>
         </div>
       </div>
       <div class="invest-row">
@@ -791,7 +812,7 @@
           <span class="en">Quick-service restaurant</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:20%;background:rgba(200,245,90,0.7);">35,000$</div>
+          <div class="invest-fill" style="width:20%;background:rgba(242,201,76,0.7);">35,000$</div>
         </div>
       </div>
       <div class="invest-row">
@@ -800,7 +821,7 @@
           <span class="en">Ice bath + sauna</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:17%;background:rgba(90,180,255,0.6);">30,000$</div>
+          <div class="invest-fill" style="width:17%;background:rgba(111,176,232,0.6);">30,000$</div>
         </div>
       </div>
       <div class="invest-row">
@@ -809,7 +830,7 @@
           <span class="en">Furniture, decor, lighting</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:23%;background:rgba(90,180,255,0.6);">40,000$</div>
+          <div class="invest-fill" style="width:23%;background:rgba(111,176,232,0.6);">40,000$</div>
         </div>
       </div>
       <div class="invest-row">
@@ -818,7 +839,7 @@
           <span class="en">Working capital (3 months)</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:23%;background:rgba(167,139,250,0.65);">40,000$</div>
+          <div class="invest-fill" style="width:23%;background:rgba(180,154,232,0.6);">40,000$</div>
         </div>
       </div>
       <div class="invest-row">
@@ -827,7 +848,7 @@
           <span class="en">Vietnam legal setup (IRC+ERC+notaire)</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:4%;background:rgba(255,107,53,0.65);">5–10k$</div>
+          <div class="invest-fill" style="width:4%;background:rgba(242,201,76,0.55);">5–10k$</div>
         </div>
       </div>
       <div class="invest-row">
@@ -836,7 +857,7 @@
           <span class="en">Singapore Holding setup (Pte Ltd)</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:1%;background:rgba(255,107,53,0.65);" title="1,500$–2,500$">&nbsp;
+          <div class="invest-fill" style="width:1%;background:rgba(242,201,76,0.55);" title="1,500$–2,500$">&nbsp;
           </div>
         </div>
       </div>
@@ -846,7 +867,7 @@
           <span class="en">Contingency (~10%)</span>
         </div>
         <div class="invest-track">
-          <div class="invest-fill" style="width:24%;background:rgba(255,68,68,0.5);">~42,000$</div>
+          <div class="invest-fill" style="width:24%;background:rgba(226,100,100,0.5);">~42,000$</div>
         </div>
       </div>
     </div>
@@ -858,7 +879,7 @@
     </div>
 
     <div class="roi-callout">
-      <p id="roi-text">
+      <p id="roi-text" style="color:var(--text);">
         <span class="fr">Au taux d'occupation actuel, le retour sur investissement est estimé à <strong
             style="color:var(--accent);" id="roi-val-fr">~3 ans</strong>.</span>
         <span class="en">At the current occupancy rate, the estimated return on investment is <strong
@@ -868,7 +889,7 @@
 
     <!-- ══ SECTION 6 — TAXATION ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(255,107,53,0.12);color:var(--accent2);">
+      <div class="section-icon" style="background:rgba(242,201,76,0.1);color:var(--accent);">
         <i data-lucide="file-text"></i>
       </div>
       <div>
@@ -885,12 +906,12 @@
           <tr>
             <td style="width:65%;"><span class="fr">Impôt sur les sociétés Vietnam (CIT)</span><span class="en">Vietnam
                 Corporate Income Tax (CIT)</span></td>
-            <td class="amt" style="color:var(--accent2);">20%<br><span
+            <td class="amt" style="color:var(--accent);">20%<br><span
                 style="font-size:10px;font-weight:400;color:var(--muted);">sur bénéfices / on profits</span></td>
           </tr>
           <tr>
             <td><span class="fr">TVA services sportifs</span><span class="en">VAT on sports services</span></td>
-            <td class="amt" style="color:var(--yellow);">10%</td>
+            <td class="amt" style="color:var(--accent);">10%</td>
           </tr>
           <tr>
             <td><span class="fr">Taxe annuelle de licence</span><span class="en">Annual license fee</span></td>
@@ -901,7 +922,7 @@
     </div>
 
     <div class="callout orange" style="margin-top:1rem;">
-      <div class="callout-icon"><i data-lucide="info"></i></div>
+      <div class="callout-icon" style="color:var(--accent);"><i data-lucide="info"></i></div>
       <div>
         <p class="fr" style="font-size:13px;color:var(--muted);line-height:1.6;">Les zones franches de Da Nang ne
           s'appliquent pas à notre secteur. <strong>Régime fiscal standard.</strong></p>
@@ -912,7 +933,7 @@
 
     <!-- ══ SECTION 7 — INTERPRETATION ══ -->
     <div class="section-header section-sep">
-      <div class="section-icon" style="background:rgba(77,255,145,0.1);color:var(--green);">
+      <div class="section-icon" style="background:rgba(127,214,143,0.1);color:var(--green);">
         <i data-lucide="shield-check"></i>
       </div>
       <div>
@@ -926,56 +947,56 @@
     <!-- Target scenario callout -->
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.75rem;">
       <div
-        style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);font-family:'DM Mono',monospace;">
+        style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);">
         <span class="fr">Scénario de référence fixe — indépendant des curseurs ci-dessus</span>
         <span class="en">Fixed reference scenario — independent of the sliders above</span>
       </div>
       <div style="flex:1;height:1px;background:var(--border);"></div>
     </div>
     <div class="callout"
-      style="background:rgba(77,255,145,0.06);border:1px solid rgba(77,255,145,0.2);margin-bottom:1.5rem;">
+      style="background:rgba(127,214,143,0.06);border:1px solid rgba(127,214,143,0.25);margin-bottom:1.5rem;">
       <div class="callout-icon" style="color:var(--green);"><i data-lucide="target"></i></div>
       <div style="flex:1;">
         <div
-          style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--green);margin-bottom:0.5rem;">
+          style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--green);margin-bottom:0.5rem;">
           <span class="fr">Scénario cible · atteignable en 4–6 mois</span>
           <span class="en">Target scenario · achievable within 4–6 months</span>
         </div>
-        <div style="font-size:13px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:0.75rem;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--muted);margin-bottom:0.75rem;">
           <span class="fr">50% occupation · Loyer 4 000$ · Staff 3 000$ · Book &amp; Go</span>
           <span class="en">50% occupancy · Rent $4,000 · Staff $3,000 · Book &amp; Go</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
           <div>
             <div
-              style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:4px;">
+              style="font-family:'Space Grotesk',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;">
               <span class="fr">CA annuel</span><span class="en">Annual revenue</span>
             </div>
-            <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent);">365 090$
+            <div style="font-family:'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums;font-size:18px;font-weight:700;color:var(--accent);">365 090$
             </div>
           </div>
           <div>
             <div
-              style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:4px;">
+              style="font-family:'Space Grotesk',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;">
               <span class="fr">Charges</span><span class="en">Costs</span>
             </div>
-            <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--muted);">~128 800$
+            <div style="font-family:'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums;font-size:18px;font-weight:700;color:var(--muted);">~128 800$
             </div>
           </div>
           <div>
             <div
-              style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:4px;">
+              style="font-family:'Space Grotesk',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;">
               <span class="fr">Résultat brut</span><span class="en">Gross result</span>
             </div>
-            <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--green);">+236 000$
+            <div style="font-family:'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums;font-size:18px;font-weight:700;color:var(--green);">+236 000$
             </div>
           </div>
           <div>
             <div
-              style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:4px;">
+              style="font-family:'Space Grotesk',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;">
               <span class="fr">Marge</span><span class="en">Margin</span>
             </div>
-            <div style="font-size:18px;font-weight:700;font-family:'DM Mono',monospace;color:var(--green);">65%</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums;font-size:18px;font-weight:700;color:var(--green);">65%</div>
           </div>
         </div>
       </div>
@@ -990,7 +1011,7 @@
         <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:8px;">
         </div>
         <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:4px;color:var(--text-strong);">
             <span class="fr">Point d'équilibre à ~20–25% d'occupation</span>
             <span class="en">Break-even at ~20–25% occupancy</span>
           </div>
@@ -1010,17 +1031,17 @@
         <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:8px;">
         </div>
         <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:4px;color:var(--text-strong);">
             <span class="fr">Book &amp; Go — marque blanche, coûts maîtrisés</span>
             <span class="en">Book &amp; Go — white-label platform, controlled costs</span>
           </div>
           <div style="font-size:13px;color:var(--muted);line-height:1.65;">
             <span class="fr">Book &amp; Go est une solution SaaS marque blanche : l'expérience de réservation est
-              entièrement aux couleurs de Chiquita Academy. La commission de 1,2% (traitement paiement uniquement)
+              entièrement aux couleurs de Oasis Padel Academy. La commission de 1,2% (traitement paiement uniquement)
               est significativement inférieure aux plateformes tierces à commission variable, ce qui préserve la marge
               à mesure que le chiffre d'affaires croît.</span>
             <span class="en">Book &amp; Go is a white-label SaaS solution: the booking experience is fully branded as
-              Chiquita Academy. The 1.2% fee (payment processing only) is significantly lower than variable-commission
+              Oasis Padel Academy. The 1.2% fee (payment processing only) is significantly lower than variable-commission
               third-party platforms, preserving margin as revenue scales.</span>
           </div>
         </div>
@@ -1031,7 +1052,7 @@
         <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:8px;">
         </div>
         <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:4px;color:var(--text-strong);">
             <span class="fr">Retour sur investissement en ~2 ans</span>
             <span class="en">Return on investment in ~2 years</span>
           </div>
@@ -1051,7 +1072,7 @@
         <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:8px;">
         </div>
         <div>
-          <div style="font-size:14px;font-weight:700;margin-bottom:4px;">
+          <div style="font-size:14px;font-weight:700;margin-bottom:4px;color:var(--text-strong);">
             <span class="fr">Un upside structurel — marché en croissance</span>
             <span class="en">Structural upside — growing market</span>
           </div>
@@ -1074,13 +1095,13 @@
     <div class="callout accent" style="margin-top:1rem;">
       <div class="callout-icon" style="color:var(--accent);"><i data-lucide="trending-up"></i></div>
       <div>
-        <p class="fr" style="font-size:14px;line-height:1.75;margin:0;">
+        <p class="fr" style="font-size:14px;line-height:1.75;margin:0;color:var(--text);">
           <strong>Le risque est asymétrique — en notre faveur.</strong><br>
           <span style="color:var(--muted);">Le seuil de rentabilité est bas (20–25%), le marché est en hyper-croissance,
             et le seul concurrent tourne déjà à 80% de capacité. Même un scénario conservateur à 40% dégage plus de 150
             000$ de résultat annuel.</span>
         </p>
-        <p class="en" style="font-size:14px;line-height:1.75;margin:0;">
+        <p class="en" style="font-size:14px;line-height:1.75;margin:0;color:var(--text);">
           <strong>Risk is asymmetric — in our favor.</strong><br>
           <span style="color:var(--muted);">The break-even threshold is low (20–25%), the market is in hyper-growth, and
             the only competitor already runs at 80% capacity. Even a conservative 40% scenario delivers over $150,000 in
@@ -1093,7 +1114,7 @@
 
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <div class="footer">
-    Chiquita Academy · Da Nang, Vietnam · Business Plan 2026<br>
+    Oasis Padel Academy · Da Nang, Vietnam · Business Plan 2026<br>
     <span class="fr">Tous droits réservés</span>
     <span class="en">All rights reserved</span>
   </div>
@@ -1113,7 +1134,6 @@
       var isOpen = nav.classList.contains('open');
       nav.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', String(!isOpen));
-
     }
     document.addEventListener('click', function (e) {
       var nav = document.getElementById('mobile-nav');
@@ -1121,13 +1141,12 @@
       if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-
       }
     });
 
     // ── Language toggle ──────────────────────────────────────
     function setLang(lang) {
-      localStorage.setItem('chiquita-lang', lang);
+      localStorage.setItem('oasis-lang', lang);
       document.documentElement.lang = lang;
       document.documentElement.className = 'lang-' + lang;
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
@@ -1135,7 +1154,7 @@
     }
 
     (function () {
-      var lang = localStorage.getItem('chiquita-lang') || 'fr';
+      var lang = localStorage.getItem('oasis-lang') || 'fr';
       document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     })();
